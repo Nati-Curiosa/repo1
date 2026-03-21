@@ -126,17 +126,16 @@ export default function App() {
             </div>
           </motion.div>
           
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
             className="relative aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl"
           >
-            <img 
-              src="https://images.weserv.nl/?url=https://lh3.googleusercontent.com/d/1BZ_1YUMHIj0fB-7uY9tKLydxpUY2Xnvh&w=1200" 
-              alt="Sustainable Fashion Sourcing - Natalia Korelina" 
+            <img
+              src="/natalia-photo.jpg"
+              alt="Natalia Korelina - Sustainable Fashion Sourcing Expert"
               className="object-cover w-full h-full"
-              referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#5A5A40]/40 to-transparent" />
           </motion.div>
@@ -394,7 +393,7 @@ export default function App() {
                   n.korelina21@gmail.com
                 </a>
                 <div className="flex gap-4">
-                  <a href="#" className="w-12 h-12 rounded-full border border-[#5A5A40]/20 flex items-center justify-center hover:bg-[#5A5A40] hover:text-white transition-all">
+                  <a href="https://www.linkedin.com/in/natalia-korelina-13975a24a/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-[#5A5A40]/20 flex items-center justify-center hover:bg-[#5A5A40] hover:text-white transition-all">
                     <Linkedin className="w-5 h-5" />
                   </a>
                 </div>
