@@ -46,8 +46,8 @@ export default function App() {
   ];
 
   const materials = [
-    "Ramie", "Lyocell (Tencel)", "Organic Cotton", "Linen", "Hemp",
-    "Deadstock Fabrics", "Eco-friendly Viscose", "Corozo Buttons", "Bio-resin Buttons",
+    "Ramie", "Lyocell (Tencel)", "Organic Cotton", "Linen", "Hemp", "Recycled Polyester", 
+    "Deadstock Fabrics", "Eco-friendly Viscose", "Corozo Buttons", "Bio-resin Buttons", 
     "Recycled Metal Zippers", "Organic Cotton Labels", "Natural Rubber Elastics", "Biodegradable Packaging"
   ];
 
@@ -126,16 +126,17 @@ export default function App() {
             </div>
           </motion.div>
           
-          <motion.div
+          <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
             className="relative aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl"
           >
-            <img
-              src="/natalia-photo.jpg"
-              alt="Natalia Korelina - Sustainable Fashion Sourcing Expert"
+            <img 
+              src="https://images.weserv.nl/?url=https://lh3.googleusercontent.com/d/1BZ_1YUMHIj0fB-7uY9tKLydxpUY2Xnvh&w=1200" 
+              alt="Sustainable Fashion Sourcing - Natalia Korelina" 
               className="object-cover w-full h-full"
+              referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#5A5A40]/40 to-transparent" />
           </motion.div>
@@ -186,155 +187,6 @@ export default function App() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Case Studies Section */}
-      <section className="py-24 bg-white border-t border-[#5A5A40]/10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif italic mb-4">Recent Projects</h2>
-            <p className="text-[#5A5A40]/60 uppercase tracking-widest text-xs font-bold">Real sourcing results</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-[#F5F5F0] p-8 rounded-[32px]">
-              <div className="text-[10px] font-bold uppercase tracking-widest text-[#5A5A40]/40 mb-3">Fashion Brand</div>
-              <h3 className="font-serif text-2xl italic mb-4">SE VISTA Sustainable Brand</h3>
-              <p className="text-[#5A5A40]/70 leading-relaxed text-sm mb-4">
-                Sourced premium ramie and lyocell fabrics across the EU, identified Portuguese manufacturers accepting low MOQ (50-100 units), coordinated full production cycle.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-2.5 py-1 bg-white rounded-full text-[10px] font-semibold text-[#5A5A40]">Ramie Sourcing</span>
-                <span className="px-2.5 py-1 bg-white rounded-full text-[10px] font-semibold text-[#5A5A40]">Low MOQ</span>
-              </div>
-            </div>
-            <div className="bg-[#F5F5F0] p-8 rounded-[32px]">
-              <div className="text-[10px] font-bold uppercase tracking-widest text-[#5A5A40]/40 mb-3">Hospitality</div>
-              <h3 className="font-serif text-2xl italic mb-4">Custom Cushions for Lisbon Restaurant</h3>
-              <p className="text-[#5A5A40]/70 leading-relaxed text-sm mb-4">
-                Found local manufacturers in Lisbon for custom cushion production. Coordinated design, fabric sourcing, and delivery — full turnkey solution.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-2.5 py-1 bg-white rounded-full text-[10px] font-semibold text-[#5A5A40]">Turnkey Production</span>
-                <span className="px-2.5 py-1 bg-white rounded-full text-[10px] font-semibold text-[#5A5A40]">Local Sourcing</span>
-              </div>
-            </div>
-            <div className="bg-[#F5F5F0] p-8 rounded-[32px]">
-              <div className="text-[10px] font-bold uppercase tracking-widest text-[#5A5A40]/40 mb-3">Creative Professional</div>
-              <h3 className="font-serif text-2xl italic mb-4">Natural Fabrics for Photo Shoots</h3>
-              <p className="text-[#5A5A40]/70 leading-relaxed text-sm mb-4">
-                Helped a florist find high-quality natural fabrics at €2-5/meter — wholesale access across Portugal and EU, significantly better than retail.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-2.5 py-1 bg-white rounded-full text-[10px] font-semibold text-[#5A5A40]">Wholesale Access</span>
-                <span className="px-2.5 py-1 bg-white rounded-full text-[10px] font-semibold text-[#5A5A40]">Cost Optimization</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-24 bg-[#F5F5F0] border-t border-[#5A5A40]/10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif italic mb-4">Sourcing Packages</h2>
-            <p className="text-[#5A5A40]/60 uppercase tracking-widest text-xs font-bold">Transparent pricing for your needs</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Basic Package */}
-            <div className="bg-white p-10 rounded-[40px] border border-[#5A5A40]/10 relative">
-              <div className="text-[10px] font-bold uppercase tracking-widest text-[#5A5A40]/40 mb-2">Basic</div>
-              <div className="mb-6">
-                <span className="text-5xl font-serif italic text-[#5A5A40]">€30</span>
-                <span className="text-[#5A5A40]/60 ml-2">per request</span>
-              </div>
-              <h3 className="font-serif text-2xl italic mb-6">Contact List</h3>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#5A5A40] flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-[#5A5A40]/70">3-5 verified supplier contacts</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#5A5A40] flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-[#5A5A40]/70">Composition & MOQ verification</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#5A5A40] flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-[#5A5A40]/70">You handle communication</span>
-                </li>
-              </ul>
-              <a href="#contact" className="block w-full py-4 text-center border border-[#5A5A40] text-[#5A5A40] rounded-full font-bold uppercase tracking-widest text-xs hover:bg-[#5A5A40] hover:text-white transition-all">
-                Get Started
-              </a>
-            </div>
-
-            {/* Standard Package */}
-            <div className="bg-[#5A5A40] text-white p-10 rounded-[40px] relative transform md:scale-105 shadow-xl">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-white text-[#5A5A40] rounded-full text-[10px] font-bold uppercase tracking-widest">
-                Most Popular
-              </div>
-              <div className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-2">Standard</div>
-              <div className="mb-6">
-                <span className="text-5xl font-serif italic">€70</span>
-                <span className="text-white/60 ml-2">per request</span>
-              </div>
-              <h3 className="font-serif text-2xl italic mb-6">Full Research & Communication</h3>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-white/90">3-5 tailored supplier options</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-white/90">I handle all communication</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-white/90">Pricing, MOQ, lead times clarified</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-white/90">Detailed report delivered</span>
-                </li>
-              </ul>
-              <a href="#contact" className="block w-full py-4 text-center bg-white text-[#5A5A40] rounded-full font-bold uppercase tracking-widest text-xs hover:bg-[#F5F5F0] transition-all">
-                Start Sourcing
-              </a>
-            </div>
-
-            {/* Full Service */}
-            <div className="bg-white p-10 rounded-[40px] border border-[#5A5A40]/10 relative">
-              <div className="text-[10px] font-bold uppercase tracking-widest text-[#5A5A40]/40 mb-2">Full Service</div>
-              <div className="mb-6">
-                <span className="text-5xl font-serif italic text-[#5A5A40]">+10%</span>
-                <span className="text-[#5A5A40]/60 ml-2">of order value</span>
-              </div>
-              <h3 className="font-serif text-2xl italic mb-6">End-to-End Management</h3>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#5A5A40] flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-[#5A5A40]/70">Everything in Standard +</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#5A5A40] flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-[#5A5A40]/70">Order placement & tracking</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#5A5A40] flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-[#5A5A40]/70">Quality control coordination</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#5A5A40] flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-[#5A5A40]/70">Delivery management</span>
-                </li>
-              </ul>
-              <a href="#contact" className="block w-full py-4 text-center border border-[#5A5A40] text-[#5A5A40] rounded-full font-bold uppercase tracking-widest text-xs hover:bg-[#5A5A40] hover:text-white transition-all">
-                Let's Talk
-              </a>
-            </div>
-          </div>
-          <p className="text-center text-sm text-[#5A5A40]/60 mt-12 italic">Custom projects and retainers available — let's discuss your needs.</p>
         </div>
       </section>
 
@@ -401,34 +253,23 @@ export default function App() {
           </div>
           
           <div className="order-1 lg:order-2">
-            <h2 className="font-serif text-4xl lg:text-5xl italic mb-8">Why Work With Me</h2>
-            <div className="space-y-10">
-                <div className="relative pl-8 border-l border-[#5A5A40]/20">
-                  <div className="absolute left-[-5px] top-0 w-[9px] h-[9px] rounded-full bg-[#5A5A40]" />
-                  <span className="text-xs font-semibold uppercase tracking-widest text-[#5A5A40]/60">4 Years in Portugal</span>
-                  <h3 className="font-serif text-2xl mt-2 italic">Local Expertise & Connections</h3>
-                  <p className="mt-4 text-[#5A5A40]/70 leading-relaxed">
-                    Living in Lisbon since 2021. I regularly attend textile trade shows and have established relationships with manufacturers, fabric agents, and suppliers across Portugal.
-                  </p>
-                  <p className="mt-3 text-[#5A5A40]/70 leading-relaxed">
-                    <strong className="text-[#5A5A40]">Why this matters:</strong> Portuguese suppliers are notoriously slow with emails and often don't speak English. They prefer phone calls and personal relationships. I have direct phone numbers of managers and agents — access you won't find online.
-                  </p>
-                </div>
+            <h2 className="font-serif text-4xl lg:text-5xl italic mb-8">Sourcing Expertise</h2>
+            <div className="space-y-12">
                 <div className="relative pl-8 border-l border-[#5A5A40]/20">
                   <div className="absolute left-[-5px] top-0 w-[9px] h-[9px] rounded-full bg-[#5A5A40]" />
                   <span className="text-xs font-semibold uppercase tracking-widest text-[#5A5A40]/60">2023 — Present</span>
                   <h3 className="font-serif text-2xl mt-2 italic">Founder & Sourcing Lead</h3>
                   <p className="font-medium text-[#5A5A40]">SE VISTA Sustainable Fashion Brand</p>
                   <p className="mt-4 text-[#5A5A40]/70 leading-relaxed">
-                    Managing the end-to-end supply chain for my own sustainable brand. I've navigated the exact challenges you're facing — finding biodegradable fabrics, negotiating low MOQ, coordinating production with ethical Portuguese manufacturers.
+                    Managing the end-to-end supply chain for a sustainable brand. Responsible for sourcing biodegradable fabrics (Ramie, Lyocell) and coordinating production with ethical Portuguese manufacturers.
                   </p>
                 </div>
                 <div className="relative pl-8 border-l border-[#5A5A40]/20">
                   <div className="absolute left-[-5px] top-0 w-[9px] h-[9px] rounded-full bg-[#5A5A40]/30" />
-                  <span className="text-xs font-semibold uppercase tracking-widest text-[#5A5A40]/60">Wholesale Access</span>
-                  <h3 className="font-serif text-2xl mt-2 italic">Suppliers Who Accept Small Orders</h3>
+                  <span className="text-xs font-semibold uppercase tracking-widest text-[#5A5A40]/60">Focus Areas</span>
+                  <h3 className="font-serif text-2xl mt-2 italic">Supply Chain Optimization</h3>
                   <p className="mt-4 text-[#5A5A40]/70 leading-relaxed">
-                    Access to EU-wide fabric wholesalers who accept orders from 1-2 meters. This is incredibly hard to find on your own — most require business registration or high minimums.
+                    Specializing in low-MOQ production cycles and sustainable material transitions for emerging conscious brands.
                   </p>
                 </div>
               </div>
@@ -455,10 +296,9 @@ export default function App() {
               </div>
 
               <div className="mt-12">
-                <h3 className="font-serif text-2xl italic mb-4 flex items-center gap-2">
-                  <Languages className="w-5 h-5" /> We Can Communicate In
+                <h3 className="font-serif text-2xl italic mb-6 flex items-center gap-2">
+                  <Languages className="w-5 h-5" /> Languages
                 </h3>
-                <p className="text-sm text-[#5A5A40]/60 mb-6 italic">I speak your language and theirs — bridging the gap between you and Portuguese suppliers.</p>
                 <div className="grid grid-cols-2 gap-4">
                   {languages.map((lang, idx) => (
                     <div key={idx} className="bg-white p-4 rounded-2xl shadow-sm">
@@ -518,7 +358,7 @@ export default function App() {
                   n.korelina21@gmail.com
                 </a>
                 <div className="flex gap-4">
-                  <a href="https://www.linkedin.com/in/natalia-korelina-13975a24a/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-[#5A5A40]/20 flex items-center justify-center hover:bg-[#5A5A40] hover:text-white transition-all">
+                  <a href="#" className="w-12 h-12 rounded-full border border-[#5A5A40]/20 flex items-center justify-center hover:bg-[#5A5A40] hover:text-white transition-all">
                     <Linkedin className="w-5 h-5" />
                   </a>
                 </div>
