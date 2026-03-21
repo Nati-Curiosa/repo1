@@ -46,8 +46,8 @@ export default function App() {
   ];
 
   const materials = [
-    "Ramie", "Lyocell (Tencel)", "Organic Cotton", "Linen", "Hemp", "Recycled Polyester", 
-    "Deadstock Fabrics", "Eco-friendly Viscose", "Corozo Buttons", "Bio-resin Buttons", 
+    "Ramie", "Lyocell (Tencel)", "Organic Cotton", "Linen", "Hemp",
+    "Deadstock Fabrics", "Eco-friendly Viscose", "Corozo Buttons", "Bio-resin Buttons",
     "Recycled Metal Zippers", "Organic Cotton Labels", "Natural Rubber Elastics", "Biodegradable Packaging"
   ];
 
@@ -190,8 +190,44 @@ export default function App() {
         </div>
       </section>
 
+      {/* Case Studies Section */}
+      <section className="py-24 bg-white border-t border-[#5A5A40]/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-serif italic mb-4">Recent Projects</h2>
+            <p className="text-[#5A5A40]/60 uppercase tracking-widest text-xs font-bold">Real sourcing results</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="bg-[#F5F5F0] p-10 rounded-[40px]">
+              <div className="text-[10px] font-bold uppercase tracking-widest text-[#5A5A40]/40 mb-4">Fashion Brand</div>
+              <h3 className="font-serif text-3xl italic mb-6">SE VISTA Sustainable Brand</h3>
+              <p className="text-[#5A5A40]/70 leading-relaxed mb-6">
+                Sourced premium ramie and lyocell fabrics across the EU, identified Portuguese manufacturers accepting low MOQ (50-100 units), and coordinated full production cycle from tech packs to quality control.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-white rounded-full text-xs font-semibold text-[#5A5A40]">Ramie Sourcing</span>
+                <span className="px-3 py-1 bg-white rounded-full text-xs font-semibold text-[#5A5A40]">Low MOQ Production</span>
+                <span className="px-3 py-1 bg-white rounded-full text-xs font-semibold text-[#5A5A40]">Full QC</span>
+              </div>
+            </div>
+            <div className="bg-[#F5F5F0] p-10 rounded-[40px]">
+              <div className="text-[10px] font-bold uppercase tracking-widest text-[#5A5A40]/40 mb-4">Creative Professional</div>
+              <h3 className="font-serif text-3xl italic mb-6">Natural Fabrics for Photo Shoots</h3>
+              <p className="text-[#5A5A40]/70 leading-relaxed mb-6">
+                Helped a florist find high-quality natural fabrics for creative shoots at €2-5/meter — significantly better value than retail, with access to wholesale suppliers across Portugal and EU.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-white rounded-full text-xs font-semibold text-[#5A5A40]">Wholesale Access</span>
+                <span className="px-3 py-1 bg-white rounded-full text-xs font-semibold text-[#5A5A40]">Cost Optimization</span>
+                <span className="px-3 py-1 bg-white rounded-full text-xs font-semibold text-[#5A5A40]">Fast Delivery</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Materials Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-[#FDFCFB]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif mb-4">Featured Materials</h2>
