@@ -356,7 +356,7 @@ export default function App() {
               {
                 name: "Eco-Tencel (Lyocell)",
                 desc: "Soft, biodegradable fiber made from sustainably harvested wood pulp.",
-                img: "https://images.unsplash.com/photo-1558769132-cb1aea1c8b58?w=800&q=80"
+                img: "/lyocell-fabric-1.jpg"
               },
               {
                 name: "Organic Linen",
@@ -371,7 +371,7 @@ export default function App() {
               >
                 <div className="aspect-[4/5] overflow-hidden rounded-3xl mb-6">
                   <img
-                    src={material.img.includes('unsplash') ? material.img : `https://images.weserv.nl/?url=${material.img}&w=800`}
+                    src={material.img.startsWith('/') || material.img.includes('unsplash') ? material.img : `https://images.weserv.nl/?url=${material.img}&w=800`}
                     alt={material.name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     referrerPolicy="no-referrer"
