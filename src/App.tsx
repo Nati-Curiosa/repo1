@@ -361,7 +361,7 @@ export default function App() {
               {
                 name: "Organic Linen",
                 desc: "Classic sustainable choice, sourced for its texture and longevity.",
-                img: "https://images.unsplash.com/photo-1615397349754-cfa2066a298e?w=800&q=80"
+                img: "/linen-fabric.jpg"
               }
             ].map((material, idx) => (
               <motion.div 
