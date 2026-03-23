@@ -266,7 +266,7 @@ export default function App() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-32 bg-white px-8 border-t border-black/5 relative overflow-hidden">
+      <section className="py-32 bg-[#F5EFE7] px-8 border-t border-black/5 relative overflow-hidden">
         {/* Decorative shapes */}
         <div className="absolute top-10 left-32 w-80 h-80 bg-[#A8B5A0] rounded-full opacity-15 blur-3xl"></div>
         <div className="absolute bottom-32 right-10 w-96 h-96 bg-[#D4A5A5] rounded-full opacity-15 blur-3xl"></div>
@@ -439,7 +439,7 @@ export default function App() {
         </div>
       </section>
       {/* Contact Section */}
-      <section id="contact" className="py-32 bg-white px-8 relative overflow-hidden">
+      <section id="contact" className="py-32 bg-[#F5EFE7] px-8 relative overflow-hidden">
         {/* Decorative shapes */}
         <div className="absolute top-32 right-10 w-80 h-80 bg-[#D4A574] rounded-full opacity-15 blur-3xl"></div>
         <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#A8B5A0] rounded-full opacity-15 blur-3xl"></div>
@@ -453,12 +453,12 @@ export default function App() {
               </h2>
 
               {/* Free 15-min Call - Highlighted Block */}
-              <div className="bg-black text-white p-8 mb-12">
+              <div className="bg-[#D4A574] text-white p-8 mb-12 rounded-2xl">
                 <div className="flex items-center gap-4 mb-4">
                   <Calendar className="w-8 h-8" />
                   <h3 className="text-2xl font-bold" style={{fontFamily: "'Playfair Display', serif"}}>Free Discovery Call</h3>
                 </div>
-                <p className="text-white/80 mb-6 leading-relaxed">
+                <p className="text-white/90 mb-6 leading-relaxed">
                   15-minute introductory call to understand your sourcing needs and how I can help.
                 </p>
                 <button
