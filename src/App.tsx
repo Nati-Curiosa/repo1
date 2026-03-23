@@ -64,7 +64,7 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-blue-600 selection:text-white" style={{fontFamily: "'Inter', sans-serif"}}>
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-gray-900 selection:text-white" style={{fontFamily: "'Inter', sans-serif"}}>
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-black/5">
         <div className="max-w-[1400px] mx-auto px-8 h-24 flex items-center justify-between">
@@ -73,9 +73,9 @@ export default function App() {
           </div>
 
           <div className="hidden md:flex items-center gap-12 text-sm font-medium tracking-wide">
-            <a href="#services" className="hover:text-blue-600 transition-colors">Services</a>
-            <a href="#about" className="hover:text-blue-600 transition-colors">About</a>
-            <a href="#contact" className="px-6 py-3 bg-black text-white hover:bg-blue-600 transition-all">Contact</a>
+            <a href="#services" className="hover:text-gray-600 transition-colors">Services</a>
+            <a href="#about" className="hover:text-gray-600 transition-colors">About</a>
+            <a href="#contact" className="px-6 py-3 bg-black text-white hover:bg-gray-800 transition-all">Contact</a>
           </div>
 
           <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -91,9 +91,9 @@ export default function App() {
           animate={{ opacity: 1 }}
           className="fixed inset-0 z-40 bg-black text-white pt-32 px-8 flex flex-col gap-8"
         >
-          <a href="#services" onClick={() => setIsMenuOpen(false)} className="text-4xl font-bold hover:text-blue-600 transition-colors" style={{fontFamily: "'Playfair Display', serif"}}>Services</a>
-          <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-4xl font-bold hover:text-blue-600 transition-colors" style={{fontFamily: "'Playfair Display', serif"}}>About</a>
-          <a href="#contact" onClick={() => setIsMenuOpen(false)} className="text-4xl font-bold hover:text-blue-600 transition-colors" style={{fontFamily: "'Playfair Display', serif"}}>Contact</a>
+          <a href="#services" onClick={() => setIsMenuOpen(false)} className="text-4xl font-bold hover:text-gray-400 transition-colors" style={{fontFamily: "'Playfair Display', serif"}}>Services</a>
+          <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-4xl font-bold hover:text-gray-400 transition-colors" style={{fontFamily: "'Playfair Display', serif"}}>About</a>
+          <a href="#contact" onClick={() => setIsMenuOpen(false)} className="text-4xl font-bold hover:text-gray-400 transition-colors" style={{fontFamily: "'Playfair Display', serif"}}>Contact</a>
           <button
             onClick={() => { setIsCalendlyOpen(true); setIsMenuOpen(false); }}
             className="mt-8 px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-black transition-all text-lg font-semibold"
@@ -104,7 +104,7 @@ export default function App() {
       )}
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
         <motion.div
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
@@ -135,14 +135,14 @@ export default function App() {
               Your bridge to ethical production in Portugal and across Europe
             </p>
             <div className="flex flex-wrap justify-center gap-6">
-              <a href="#contact" className="px-10 py-5 bg-white text-black font-semibold hover:bg-blue-600 hover:text-white transition-all text-lg">
+              <a href="#contact" className="px-10 py-5 bg-white text-black font-semibold hover:bg-gray-100 transition-all text-lg">
                 Start Project
               </a>
               <button
                 onClick={() => setIsCalendlyOpen(true)}
                 className="px-10 py-5 border-2 border-white text-white font-semibold hover:bg-white hover:text-black transition-all text-lg"
               >
-                Book Call
+                Book 15-min Call
               </button>
             </div>
           </motion.div>
@@ -160,7 +160,7 @@ export default function App() {
           <p className="text-xs tracking-[0.3em] uppercase mb-12 text-center text-black/40 font-medium">Specialized Materials</p>
           <div className="flex flex-wrap justify-center gap-x-12 gap-y-6">
             {materials.map((item, idx) => (
-              <span key={idx} className="text-lg font-medium text-black/70 hover:text-blue-600 transition-colors cursor-default">
+              <span key={idx} className="text-lg font-medium text-black/70 hover:text-black transition-colors cursor-default">
                 {item}
               </span>
             ))}
@@ -181,7 +181,7 @@ export default function App() {
               <motion.div
                 key={idx}
                 whileHover={{ y: -10 }}
-                className="border-l-4 border-black pl-8 hover:border-blue-600 transition-all"
+                className="border-l-4 border-black pl-8 hover:border-gray-400 transition-all"
               >
                 <div className="text-xs tracking-[0.3em] uppercase mb-4 text-black/40">{service.tag}</div>
                 <h3 className="text-3xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>{service.title}</h3>
@@ -248,42 +248,42 @@ export default function App() {
         </div>
       </section>
 
-      {/* Pricing Section - Magazine Editorial Style */}
-      <section className="py-32 bg-black text-white px-8">
+      {/* Pricing Section */}
+      <section className="py-32 bg-white px-8 border-t border-black/5">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-24">
-            <div className="text-sm tracking-[0.3em] uppercase mb-4 text-white/60">Investment</div>
+            <div className="text-sm tracking-[0.3em] uppercase mb-4 text-black/60">Investment</div>
             <h2 className="text-6xl md:text-7xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Pricing</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-12">
             {/* Basic */}
-            <motion.div whileHover={{ y: -10 }} className="border border-white/20 p-12 hover:border-blue-600 transition-all">
-              <div className="text-xs tracking-[0.3em] uppercase mb-8 text-white/60">Basic</div>
+            <motion.div whileHover={{ y: -10 }} className="border-2 border-black/10 p-12 hover:border-black/30 transition-all">
+              <div className="text-xs tracking-[0.3em] uppercase mb-8 text-black/40">Basic</div>
               <div className="mb-12">
                 <div className="text-8xl font-bold mb-2" style={{fontFamily: "'Playfair Display', serif"}}>30</div>
-                <div className="text-2xl text-white/60">EUR</div>
+                <div className="text-2xl text-black/60">EUR</div>
               </div>
               <h3 className="text-2xl font-semibold mb-8">Contact List</h3>
-              <ul className="space-y-4 text-lg mb-12 text-white/80">
+              <ul className="space-y-4 text-lg mb-12 text-black/70">
                 <li>• 3-5 verified contacts</li>
                 <li>• MOQ verification</li>
                 <li>• Self-managed</li>
               </ul>
-              <a href="#contact" className="block w-full py-5 text-center border-2 border-white text-white hover:bg-white hover:text-black transition-all font-semibold text-sm tracking-wider">
+              <a href="#contact" className="block w-full py-5 text-center border-2 border-black text-black hover:bg-black hover:text-white transition-all font-semibold text-sm tracking-wider">
                 GET STARTED
               </a>
             </motion.div>
 
             {/* Standard - Featured */}
-            <motion.div whileHover={{ y: -10 }} className="bg-blue-600 p-12 relative transform md:scale-105">
+            <motion.div whileHover={{ y: -10 }} className="bg-black text-white p-12 relative transform md:scale-105">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-white text-black text-xs font-bold tracking-wider">
                 MOST POPULAR
               </div>
-              <div className="text-xs tracking-[0.3em] uppercase mb-8 text-white/80">Standard</div>
+              <div className="text-xs tracking-[0.3em] uppercase mb-8 text-white/60">Standard</div>
               <div className="mb-12">
                 <div className="text-8xl font-bold mb-2" style={{fontFamily: "'Playfair Display', serif"}}>70</div>
-                <div className="text-2xl text-white/80">EUR</div>
+                <div className="text-2xl text-white/70">EUR</div>
               </div>
               <h3 className="text-2xl font-semibold mb-8">Full Service</h3>
               <ul className="space-y-4 text-lg mb-12">
@@ -292,40 +292,40 @@ export default function App() {
                 <li>• Pricing & MOQ clarity</li>
                 <li>• Detailed report</li>
               </ul>
-              <a href="#contact" className="block w-full py-5 text-center bg-white text-blue-600 hover:bg-black hover:text-white transition-all font-semibold text-sm tracking-wider">
+              <a href="#contact" className="block w-full py-5 text-center bg-white text-black hover:bg-gray-100 transition-all font-semibold text-sm tracking-wider">
                 START SOURCING
               </a>
             </motion.div>
 
             {/* Full Service */}
-            <motion.div whileHover={{ y: -10 }} className="border border-white/20 p-12 hover:border-blue-600 transition-all">
-              <div className="text-xs tracking-[0.3em] uppercase mb-8 text-white/60">Full Service</div>
+            <motion.div whileHover={{ y: -10 }} className="border-2 border-black/10 p-12 hover:border-black/30 transition-all">
+              <div className="text-xs tracking-[0.3em] uppercase mb-8 text-black/40">Full Service</div>
               <div className="mb-12">
                 <div className="text-8xl font-bold mb-2" style={{fontFamily: "'Playfair Display', serif"}}>10<span className="text-5xl">%</span></div>
-                <div className="text-2xl text-white/60">of order</div>
+                <div className="text-2xl text-black/60">of order</div>
               </div>
               <h3 className="text-2xl font-semibold mb-8">End-to-End</h3>
-              <ul className="space-y-4 text-lg mb-12 text-white/80">
+              <ul className="space-y-4 text-lg mb-12 text-black/70">
                 <li>• Everything above</li>
                 <li>• Order placement</li>
                 <li>• Quality control</li>
                 <li>• Delivery mgmt</li>
               </ul>
-              <a href="#contact" className="block w-full py-5 text-center border-2 border-white text-white hover:bg-white hover:text-black transition-all font-semibold text-sm tracking-wider">
+              <a href="#contact" className="block w-full py-5 text-center border-2 border-black text-black hover:bg-black hover:text-white transition-all font-semibold text-sm tracking-wider">
                 LET'S TALK
               </a>
             </motion.div>
           </div>
 
-          <p className="text-center text-lg mt-16 text-white/60">Custom projects available</p>
+          <p className="text-center text-lg mt-16 text-black/60">Custom projects available</p>
         </div>
       </section>
       {/* Featured Materials Section */}
       <section className="py-32 bg-white px-8">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-24">
-            <div className="text-sm tracking-[0.3em] uppercase mb-4 text-black/60">Specialty Fabrics</div>
-            <h2 className="text-6xl md:text-7xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Materials</h2>
+            <div className="text-sm tracking-[0.3em] uppercase mb-4 text-black/60">Recent Work</div>
+            <h2 className="text-6xl md:text-7xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Fabrics We've Sourced</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-12">
             {[
@@ -354,7 +354,7 @@ export default function App() {
                   <img
                     src={material.img.startsWith('/') || material.img.includes('unsplash') ? material.img : `https://images.weserv.nl/?url=${material.img}&w=800`}
                     alt={material.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     referrerPolicy="no-referrer"
                   />
                 </div>
@@ -379,24 +379,19 @@ export default function App() {
 
               <div className="space-y-8 text-lg text-black/70 leading-relaxed">
                 <p>
-                  Living in Lisbon since 2021. Regular attendance at textile trade shows. Established relationships with manufacturers, fabric agents, and suppliers across Portugal.
+                  I've been living in Lisbon since 2021. I regularly attend textile trade shows and have established relationships with manufacturers, fabric agents, and suppliers across Portugal. Through my own sustainable fashion brand SE VISTA, I've navigated the exact challenges you're facing — finding biodegradable fabrics like ramie and lyocell, negotiating low MOQ (50-100 units), and coordinating production with ethical Portuguese manufacturers.
                 </p>
                 <p>
-                  <strong className="text-black font-semibold">The Portuguese challenge:</strong> Suppliers are slow with emails. Many don't speak English. They prefer phone calls and personal relationships.
+                  <strong className="text-black font-semibold">Why this matters:</strong> Portuguese suppliers are notoriously slow with emails and often don't speak English. They prefer phone calls and personal relationships. I have direct phone numbers of managers and agents — access you won't find online.
                 </p>
                 <p>
-                  <strong className="text-black font-semibold">My advantage:</strong> Direct phone numbers of managers and agents. Access you won't find online.
+                  I also have access to EU-wide fabric wholesalers who accept orders from 1-2 meters. This is incredibly hard to find on your own — most require business registration or high minimums.
                 </p>
                 <div className="pt-8 border-t border-black/10">
-                  <div className="text-sm tracking-[0.3em] uppercase mb-4 text-black/40">Languages</div>
-                  <div className="flex gap-4 text-base font-medium">
-                    {languages.map((lang, idx) => (
-                      <span key={idx} className="text-black/80">
-                        {lang.name}
-                        <span className="text-black/40 text-sm ml-1">({lang.level})</span>
-                      </span>
-                    ))}
-                  </div>
+                  <div className="text-sm tracking-[0.3em] uppercase mb-4 text-black/40">Communication</div>
+                  <p className="text-base font-medium text-black/80">
+                    I speak <strong className="text-black">English</strong>, <strong className="text-black">Portuguese</strong>, and <strong className="text-black">Russian</strong> — bridging the gap between you and local suppliers.
+                  </p>
                 </div>
               </div>
             </div>
@@ -414,44 +409,51 @@ export default function App() {
           </div>
         </div>
       </section>
-      {/* Contact Section - Magazine Editorial Style */}
-      <section id="contact" className="py-32 bg-black text-white px-8">
+      {/* Contact Section */}
+      <section id="contact" className="py-32 bg-gray-50 px-8">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
-              <div className="text-sm tracking-[0.3em] uppercase mb-6 text-white/60">Get in Touch</div>
+              <div className="text-sm tracking-[0.3em] uppercase mb-6 text-black/60">Get in Touch</div>
               <h2 className="text-5xl md:text-6xl font-bold mb-12 leading-tight" style={{fontFamily: "'Playfair Display', serif"}}>
                 Let's Build<br/>Your Supply<br/>Chain
               </h2>
 
-              <div className="space-y-8">
-                <a href="mailto:n.korelina21@gmail.com" className="flex items-center gap-6 text-2xl hover:text-blue-600 transition-colors group">
-                  <div className="w-16 h-16 border border-white/20 flex items-center justify-center group-hover:border-blue-600 transition-all">
-                    <Mail className="w-6 h-6" />
-                  </div>
-                  <span className="font-medium">Email</span>
-                </a>
-
-                <a href="https://www.linkedin.com/in/natalia-korelina-13975a24a/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-6 text-2xl hover:text-blue-600 transition-colors group">
-                  <div className="w-16 h-16 border border-white/20 flex items-center justify-center group-hover:border-blue-600 transition-all">
-                    <Linkedin className="w-6 h-6" />
-                  </div>
-                  <span className="font-medium">LinkedIn</span>
-                </a>
-
+              {/* Free 15-min Call - Highlighted Block */}
+              <div className="bg-black text-white p-8 mb-12">
+                <div className="flex items-center gap-4 mb-4">
+                  <Calendar className="w-8 h-8" />
+                  <h3 className="text-2xl font-bold" style={{fontFamily: "'Playfair Display', serif"}}>Free Discovery Call</h3>
+                </div>
+                <p className="text-white/80 mb-6 leading-relaxed">
+                  15-minute introductory call to understand your sourcing needs and how I can help.
+                </p>
                 <button
                   onClick={() => setIsCalendlyOpen(true)}
-                  className="flex items-center gap-6 text-2xl hover:text-blue-600 transition-colors group w-full text-left"
+                  className="w-full py-4 bg-white text-black font-semibold hover:bg-gray-100 transition-all text-sm tracking-wider"
                 >
-                  <div className="w-16 h-16 border border-white/20 flex items-center justify-center group-hover:border-blue-600 transition-all">
-                    <Calendar className="w-6 h-6" />
-                  </div>
-                  <span className="font-medium">Book Call</span>
+                  BOOK YOUR FREE CALL
                 </button>
               </div>
 
-              <div className="mt-16 pt-16 border-t border-white/10">
-                <p className="text-lg text-white/60 leading-relaxed">
+              <div className="space-y-6">
+                <a href="mailto:n.korelina21@gmail.com" className="flex items-center gap-6 text-xl hover:text-gray-600 transition-colors group">
+                  <div className="w-14 h-14 border-2 border-black/10 flex items-center justify-center group-hover:border-black/30 transition-all">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  <span className="font-medium">n.korelina21@gmail.com</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/natalia-korelina-13975a24a/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-6 text-xl hover:text-gray-600 transition-colors group">
+                  <div className="w-14 h-14 border-2 border-black/10 flex items-center justify-center group-hover:border-black/30 transition-all">
+                    <Linkedin className="w-5 h-5" />
+                  </div>
+                  <span className="font-medium">LinkedIn</span>
+                </a>
+              </div>
+
+              <div className="mt-12 pt-12 border-t border-black/10">
+                <p className="text-lg text-black/60 leading-relaxed">
                   Ready to find the perfect materials or manufacturer in Portugal? Reach out to discuss your project.
                 </p>
               </div>
