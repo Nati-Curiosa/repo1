@@ -68,8 +68,9 @@ export default function App() {
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-black/5">
         <div className="max-w-[1400px] mx-auto px-8 h-24 flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          <div className="flex flex-col">
             <span className="text-xl font-bold tracking-tight" style={{fontFamily: "'Playfair Display', serif"}}>NATALIA KORELINA</span>
+            <span className="text-xs tracking-wider text-black/50 uppercase">Sustainable Sourcing • Portugal & EU</span>
           </div>
 
           <div className="hidden md:flex items-center gap-12 text-sm font-medium tracking-wide">
@@ -112,9 +113,10 @@ export default function App() {
           className="absolute inset-0"
         >
           <img
-            src="/natalia-professional.jpg"
-            alt="Natalia Korelina"
+            src="https://images.weserv.nl/?url=https://lh3.googleusercontent.com/d/11_UR3ERzCi2L5qAQWpmakzX1qVBJMGnt&w=1600"
+            alt="Natural Fabric Texture"
             className="w-full h-full object-cover"
+            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
         </motion.div>
@@ -425,12 +427,12 @@ export default function App() {
 
             <div className="grid grid-cols-2 gap-6">
               <div className="space-y-6">
-                <img src="/lyocell-fabric-1.jpg" className="w-full aspect-[3/4] object-cover" alt="Fabric Detail" />
-                <img src="/linen-fabric.jpg" className="w-full aspect-square object-cover" alt="Sustainable Production" />
+                <img src="/natalia-professional.jpg" className="w-full aspect-[3/4] object-cover rounded-2xl" alt="Natalia Korelina - Sustainable Sourcing Expert" />
+                <img src="/linen-fabric.jpg" className="w-full aspect-square object-cover rounded-2xl" alt="Natural Linen Fabric" />
               </div>
               <div className="space-y-6 pt-12">
-                <img src="https://images.weserv.nl/?url=https://lh3.googleusercontent.com/d/1ta63uQL4qdzsbK0k7UzPbhAHKyIXnmy7&w=600" className="w-full aspect-square object-cover" referrerPolicy="no-referrer" alt="Natural Textiles" />
-                <img src="/lyocell-fabric-1.jpg" className="w-full aspect-[3/4] object-cover" alt="Ethical Manufacturing" />
+                <img src="https://images.weserv.nl/?url=https://lh3.googleusercontent.com/d/1ta63uQL4qdzsbK0k7UzPbhAHKyIXnmy7&w=600" className="w-full aspect-square object-cover rounded-2xl" referrerPolicy="no-referrer" alt="Ramie Textile" />
+                <img src="/lyocell-fabric-1.jpg" className="w-full aspect-[3/4] object-cover rounded-2xl" alt="Lyocell Fabric" />
               </div>
             </div>
           </div>
