@@ -46,9 +46,9 @@ export default function App() {
   ];
 
   const materials = [
-    "Ramie", "Lyocell (Tencel)", "Organic Cotton", "Linen", "Hemp",
-    "Deadstock Fabrics", "Eco-friendly Viscose", "Corozo Buttons", "Bio-resin Buttons",
-    "Recycled Metal Zippers", "Organic Cotton Labels", "Natural Rubber Elastics", "Biodegradable Packaging"
+    "Ramie", "Lyocell (Tencel)", "Organic Cotton", "Linen", "Hemp", "SeaCell", "Piñatex (Pineapple)", "Banana Fiber",
+    "Kapok", "Biodegradable Interlining", "Plastic-Free Vegan Leather", "Mushroom Leather", "Deadstock Fabrics",
+    "Corozo Buttons", "Bio-resin Buttons", "Recycled Metal Zippers", "Organic Cotton Labels", "Natural Rubber Elastics"
   ];
 
   const skills = {
@@ -60,8 +60,7 @@ export default function App() {
   const languages = [
     { name: "Russian", level: "Native" },
     { name: "English", level: "Fluent" },
-    { name: "Portuguese", level: "B2" },
-    { name: "German", level: "Basic" }
+    { name: "Portuguese", level: "B2" }
   ];
 
   return (
@@ -133,7 +132,7 @@ export default function App() {
             className="relative aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl"
           >
             <img
-              src="/natalia-professional.jpg"
+              src="/repo1/natalia-professional.jpg"
               alt="Natalia Korelina - Sustainable Fashion Sourcing Expert"
               className="object-cover w-full h-full"
             />
@@ -349,20 +348,20 @@ export default function App() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { 
-                name: "Premium Ramie", 
+              {
+                name: "Premium Ramie",
                 desc: "A durable, natural fiber with a silk-like luster, perfect for breathable summer collections.",
                 img: "https://lh3.googleusercontent.com/d/1ta63uQL4qdzsbK0k7UzPbhAHKyIXnmy7"
               },
-              { 
-                name: "Eco-Tencel", 
+              {
+                name: "Eco-Tencel (Lyocell)",
                 desc: "Soft, biodegradable fiber made from sustainably harvested wood pulp.",
-                img: "https://lh3.googleusercontent.com/d/11_UR3ERzCi2L5qAQWpmakzX1qVBJMGnt"
+                img: "https://images.unsplash.com/photo-1558769132-cb1aea1c8b58?w=800&q=80"
               },
-              { 
-                name: "Organic Linen", 
+              {
+                name: "Organic Linen",
                 desc: "Classic sustainable choice, sourced for its texture and longevity.",
-                img: "https://lh3.googleusercontent.com/d/1BZ_1YUMHIj0fB-7uY9tKLydxpUY2Xnvh"
+                img: "https://images.unsplash.com/photo-1615397349754-cfa2066a298e?w=800&q=80"
               }
             ].map((material, idx) => (
               <motion.div 
@@ -371,8 +370,8 @@ export default function App() {
                 className="group cursor-pointer"
               >
                 <div className="aspect-[4/5] overflow-hidden rounded-3xl mb-6">
-                  <img 
-                    src={`https://images.weserv.nl/?url=${material.img}&w=800`} 
+                  <img
+                    src={material.img.includes('unsplash') ? material.img : `https://images.weserv.nl/?url=${material.img}&w=800`}
                     alt={material.name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     referrerPolicy="no-referrer"
@@ -436,69 +435,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* Skills & Education */}
-      <section id="skills" className="py-24 px-6 bg-[#F5F5F0]">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-3 gap-12">
-            {/* Education */}
-            <div className="lg:col-span-1">
-              <h2 className="font-serif text-4xl italic mb-8">Education</h2>
-              <div className="space-y-8">
-                <div>
-                  <h4 className="font-medium text-[#5A5A40]">Lisbon School of Design</h4>
-                  <p className="text-sm text-[#5A5A40]/60 italic">Fashion Design Diploma (2025)</p>
-                </div>
-                <div>
-                  <h4 className="font-medium text-[#5A5A40]">EIIS - European Institute</h4>
-                  <p className="text-sm text-[#5A5A40]/60 italic">Sustainable Fashion Management</p>
-                </div>
-              </div>
-
-              <div className="mt-12">
-                <h3 className="font-serif text-2xl italic mb-4 flex items-center gap-2">
-                  <Languages className="w-5 h-5" /> We Can Communicate In
-                </h3>
-                <p className="text-sm text-[#5A5A40]/60 mb-6 italic">I speak your language and theirs — bridging the gap between you and Portuguese suppliers.</p>
-                <div className="grid grid-cols-2 gap-4">
-                  {languages.map((lang, idx) => (
-                    <div key={idx} className="bg-white p-4 rounded-2xl shadow-sm">
-                      <p className="text-[10px] font-bold uppercase tracking-widest text-[#5A5A40]/40">{lang.level}</p>
-                      <p className="font-serif text-lg italic">{lang.name}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Skills Grid */}
-            <div className="lg:col-span-2 bg-[#5A5A40] text-white p-12 rounded-[48px]">
-              <h2 className="font-serif text-4xl italic mb-12">Expertise</h2>
-              <div className="grid md:grid-cols-2 gap-12">
-                <div>
-                  <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-6">Fashion & Operations</h4>
-                  <ul className="space-y-3">
-                    {[...skills.fashion, ...skills.business].map((skill, idx) => (
-                      <li key={idx} className="flex items-center gap-3 font-serif text-xl italic">
-                        <div className="w-1.5 h-1.5 rounded-full bg-white/30" /> {skill}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white/40 mb-6">Digital Tools</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {skills.digital.map((tool, idx) => (
-                      <span key={idx} className="px-4 py-2 bg-white/10 rounded-full text-sm border border-white/10">
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Contact Section */}
       <section id="contact" className="py-24 bg-[#FDFCFB] px-6">
