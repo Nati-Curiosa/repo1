@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
-import { Leaf, MapPin, Globe, CheckCircle2, Mail, Linkedin, ArrowRight, Menu, X, Award, Languages, Cpu, Calendar } from "lucide-react";
+import { Leaf, MapPin, Globe, CheckCircle2, Mail, Linkedin, Menu, X, Award, Languages, Cpu, Calendar } from "lucide-react";
 import { PopupModal } from "react-calendly";
 
 export default function App() {
@@ -146,11 +146,6 @@ export default function App() {
               </button>
             </div>
           </motion.div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white animate-bounce">
-          <ArrowRight className="w-6 h-6 rotate-90" />
         </div>
       </section>
 
