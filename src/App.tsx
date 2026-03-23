@@ -132,7 +132,7 @@ export default function App() {
             className="relative aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl"
           >
             <img
-              src="/repo1/natalia-professional.jpg"
+              src="/natalia-professional.jpg"
               alt="Natalia Korelina - Sustainable Fashion Sourcing Expert"
               className="object-cover w-full h-full"
             />
