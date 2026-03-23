@@ -408,7 +408,7 @@ export default function App() {
 
               <div className="space-y-8 text-lg text-black/70 leading-relaxed">
                 <p>
-                  I've been living in Lisbon since 2021. I regularly attend textile trade shows and have established relationships with manufacturers, fabric agents, and suppliers across Portugal. Through my own sustainable fashion brand SE VISTA, I've navigated the exact challenges you're facing — finding biodegradable fabrics like ramie and lyocell, negotiating low MOQ (50-100 units), and coordinating production with ethical Portuguese manufacturers.
+                  I've been living in Lisbon since 2022. I regularly attend textile trade shows and have established relationships with manufacturers, fabric agents, and suppliers across Portugal. Through my own sustainable fashion brand SE VISTA, I've navigated the exact challenges you're facing — finding biodegradable fabrics like ramie and lyocell, negotiating low MOQ (50-100 units), and coordinating production with ethical Portuguese manufacturers.
                 </p>
                 <p>
                   <strong className="text-black font-semibold">Why this matters:</strong> Portuguese suppliers are notoriously slow with emails and often don't speak English. They prefer phone calls and personal relationships. I have direct phone numbers of managers and agents — access you won't find online.
