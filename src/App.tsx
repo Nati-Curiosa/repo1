@@ -301,13 +301,13 @@ export default function App() {
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-white text-black text-xs font-bold tracking-wider">
                 MOST POPULAR
               </div>
-              <div className="text-xs tracking-[0.3em] uppercase mb-8 text-white/70">Standard</div>
+              <div className="text-xs tracking-[0.3em] uppercase mb-8 text-white/80">Standard</div>
               <div className="mb-12">
                 <div className="text-8xl font-bold mb-2" style={{fontFamily: "'Playfair Display', serif"}}>70</div>
                 <div className="text-2xl text-white/80">EUR</div>
               </div>
               <h3 className="text-2xl font-semibold mb-8">Full Service</h3>
-              <ul className="space-y-4 text-lg mb-12 text-white/95">
+              <ul className="space-y-4 text-lg mb-12">
                 <li>• Tailored options</li>
                 <li>• Full communication</li>
                 <li>• Pricing & MOQ clarity</li>
@@ -327,10 +327,10 @@ export default function App() {
               </div>
               <h3 className="text-2xl font-semibold mb-8">End-to-End</h3>
               <ul className="space-y-4 text-lg mb-12 text-black/70">
-                <li>• Standard package +</li>
+                <li>• Everything above</li>
                 <li>• Order placement</li>
                 <li>• Quality control</li>
-                <li>• Delivery management</li>
+                <li>• Delivery mgmt</li>
               </ul>
               <a href="#contact" className="block w-full py-5 text-center border-2 border-black text-black hover:bg-black hover:text-white transition-all font-semibold text-sm tracking-wider">
                 LET'S TALK
