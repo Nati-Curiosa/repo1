@@ -86,12 +86,21 @@ export default function App() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-[#FDFCFB] pt-24 px-6 flex flex-col gap-6 text-2xl font-serif italic">
-          <a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a>
-          <a href="#experience" onClick={() => setIsMenuOpen(false)}>About</a>
-          <a href="#skills" onClick={() => setIsMenuOpen(false)}>Skills</a>
-          <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
-        </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="fixed inset-0 z-40 bg-black text-white pt-32 px-8 flex flex-col gap-8"
+        >
+          <a href="#services" onClick={() => setIsMenuOpen(false)} className="text-4xl font-bold hover:text-blue-600 transition-colors" style={{fontFamily: "'Playfair Display', serif"}}>Services</a>
+          <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-4xl font-bold hover:text-blue-600 transition-colors" style={{fontFamily: "'Playfair Display', serif"}}>About</a>
+          <a href="#contact" onClick={() => setIsMenuOpen(false)} className="text-4xl font-bold hover:text-blue-600 transition-colors" style={{fontFamily: "'Playfair Display', serif"}}>Contact</a>
+          <button
+            onClick={() => { setIsCalendlyOpen(true); setIsMenuOpen(false); }}
+            className="mt-8 px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-black transition-all text-lg font-semibold"
+          >
+            Book Call
+          </button>
+        </motion.div>
       )}
 
       {/* Hero Section */}
@@ -146,12 +155,12 @@ export default function App() {
       </section>
 
       {/* Materials Keywords Section */}
-      <section className="py-12 bg-[#5A5A40]/5 px-6 border-y border-[#5A5A40]/10">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#5A5A40]/40 mb-6 text-center">Specialized Materials & Trimmings</p>
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-4">
+      <section className="py-20 bg-gray-50 px-8">
+        <div className="max-w-[1400px] mx-auto">
+          <p className="text-xs tracking-[0.3em] uppercase mb-12 text-center text-black/40 font-medium">Specialized Materials</p>
+          <div className="flex flex-wrap justify-center gap-x-12 gap-y-6">
             {materials.map((item, idx) => (
-              <span key={idx} className="font-serif text-lg italic text-[#5A5A40]/80 hover:text-[#5A5A40] transition-colors cursor-default">
+              <span key={idx} className="text-lg font-medium text-black/70 hover:text-blue-600 transition-colors cursor-default">
                 {item}
               </span>
             ))}
@@ -160,30 +169,23 @@ export default function App() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 bg-[#F5F5F0] px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="font-serif text-4xl lg:text-5xl italic mb-4">Freelance Services</h2>
-            <p className="text-[#5A5A40]/60 uppercase tracking-widest text-xs font-bold">Tailored solutions for your brand</p>
+      <section id="services" className="py-32 bg-white px-8">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="text-center mb-24">
+            <div className="text-sm tracking-[0.3em] uppercase mb-4 text-black/60">What I Do</div>
+            <h2 className="text-6xl md:text-7xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Services</h2>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <div className="grid md:grid-cols-2 gap-12">
             {services.map((service, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
-                whileHover={{ y: -5 }}
-                className="bg-white p-8 rounded-[32px] shadow-sm border border-[#5A5A40]/5 flex flex-col h-full"
+                whileHover={{ y: -10 }}
+                className="border-l-4 border-black pl-8 hover:border-blue-600 transition-all"
               >
-                <div className="flex justify-between items-start mb-6">
-                  <div className="w-10 h-10 bg-[#5A5A40]/10 rounded-xl flex items-center justify-center text-[#5A5A40]">
-                    {service.icon}
-                  </div>
-                  <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-[#F5F5F0] rounded-md text-[#5A5A40]/50">
-                    {service.tag}
-                  </span>
-                </div>
-                <h3 className="font-serif text-xl mb-4 italic">{service.title}</h3>
-                <p className="text-sm text-[#5A5A40]/70 leading-relaxed flex-grow">
+                <div className="text-xs tracking-[0.3em] uppercase mb-4 text-black/40">{service.tag}</div>
+                <h3 className="text-3xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>{service.title}</h3>
+                <p className="text-lg text-black/70 leading-relaxed">
                   {service.description}
                 </p>
               </motion.div>
@@ -193,46 +195,55 @@ export default function App() {
       </section>
 
       {/* Case Studies Section */}
-      <section className="py-24 bg-white border-t border-[#5A5A40]/10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif italic mb-4">Recent Projects</h2>
-            <p className="text-[#5A5A40]/60 uppercase tracking-widest text-xs font-bold">Real sourcing results</p>
+      <section className="py-32 bg-gray-50 px-8">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="text-center mb-24">
+            <div className="text-sm tracking-[0.3em] uppercase mb-4 text-black/60">Recent Work</div>
+            <h2 className="text-6xl md:text-7xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Projects</h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-[#F5F5F0] p-8 rounded-[32px]">
-              <div className="text-[10px] font-bold uppercase tracking-widest text-[#5A5A40]/40 mb-3">Fashion Brand</div>
-              <h3 className="font-serif text-2xl italic mb-4">SE VISTA Sustainable Brand</h3>
-              <p className="text-[#5A5A40]/70 leading-relaxed text-sm mb-4">
-                Sourced premium ramie and lyocell fabrics across the EU, identified Portuguese manufacturers accepting low MOQ (50-100 units), coordinated full production cycle.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-2.5 py-1 bg-white rounded-full text-[10px] font-semibold text-[#5A5A40]">Ramie Sourcing</span>
-                <span className="px-2.5 py-1 bg-white rounded-full text-[10px] font-semibold text-[#5A5A40]">Low MOQ</span>
+          <div className="grid md:grid-cols-3 gap-12">
+            <motion.div whileHover={{ y: -10 }} className="bg-white overflow-hidden">
+              <div className="p-10">
+                <div className="text-xs tracking-[0.3em] uppercase mb-4 text-black/40">Fashion Brand</div>
+                <h3 className="text-3xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>SE VISTA</h3>
+                <p className="text-lg text-black/70 leading-relaxed mb-6">
+                  Premium ramie & lyocell sourcing. Low MOQ manufacturing. Full production cycle.
+                </p>
+                <div className="flex flex-wrap gap-3 text-sm font-medium">
+                  <span className="text-black/50">Ramie</span>
+                  <span className="text-black/50">•</span>
+                  <span className="text-black/50">MOQ 50-100</span>
+                </div>
               </div>
-            </div>
-            <div className="bg-[#F5F5F0] p-8 rounded-[32px]">
-              <div className="text-[10px] font-bold uppercase tracking-widest text-[#5A5A40]/40 mb-3">Hospitality</div>
-              <h3 className="font-serif text-2xl italic mb-4">Custom Cushions for Lisbon Restaurant</h3>
-              <p className="text-[#5A5A40]/70 leading-relaxed text-sm mb-4">
-                Found local manufacturers in Lisbon for custom cushion production. Coordinated design, fabric sourcing, and delivery — full turnkey solution.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-2.5 py-1 bg-white rounded-full text-[10px] font-semibold text-[#5A5A40]">Turnkey Production</span>
-                <span className="px-2.5 py-1 bg-white rounded-full text-[10px] font-semibold text-[#5A5A40]">Local Sourcing</span>
+            </motion.div>
+            <motion.div whileHover={{ y: -10 }} className="bg-white overflow-hidden">
+              <div className="p-10">
+                <div className="text-xs tracking-[0.3em] uppercase mb-4 text-black/40">Hospitality</div>
+                <h3 className="text-3xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Restaurant</h3>
+                <p className="text-lg text-black/70 leading-relaxed mb-6">
+                  Custom cushions, Lisbon. Local manufacturers, turnkey delivery.
+                </p>
+                <div className="flex flex-wrap gap-3 text-sm font-medium">
+                  <span className="text-black/50">Turnkey</span>
+                  <span className="text-black/50">•</span>
+                  <span className="text-black/50">Local</span>
+                </div>
               </div>
-            </div>
-            <div className="bg-[#F5F5F0] p-8 rounded-[32px]">
-              <div className="text-[10px] font-bold uppercase tracking-widest text-[#5A5A40]/40 mb-3">Creative Professional</div>
-              <h3 className="font-serif text-2xl italic mb-4">Natural Fabrics for Photo Shoots</h3>
-              <p className="text-[#5A5A40]/70 leading-relaxed text-sm mb-4">
-                Helped a florist find high-quality natural fabrics at €2-5/meter — wholesale access across Portugal and EU, significantly better than retail.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-2.5 py-1 bg-white rounded-full text-[10px] font-semibold text-[#5A5A40]">Wholesale Access</span>
-                <span className="px-2.5 py-1 bg-white rounded-full text-[10px] font-semibold text-[#5A5A40]">Cost Optimization</span>
+            </motion.div>
+            <motion.div whileHover={{ y: -10 }} className="bg-white overflow-hidden">
+              <div className="p-10">
+                <div className="text-xs tracking-[0.3em] uppercase mb-4 text-black/40">Creative</div>
+                <h3 className="text-3xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Photo Shoots</h3>
+                <p className="text-lg text-black/70 leading-relaxed mb-6">
+                  Natural fabrics €2-5/m for florist. Wholesale access, EU-wide.
+                </p>
+                <div className="flex flex-wrap gap-3 text-sm font-medium">
+                  <span className="text-black/50">Wholesale</span>
+                  <span className="text-black/50">•</span>
+                  <span className="text-black/50">€2-5/m</span>
+                </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
