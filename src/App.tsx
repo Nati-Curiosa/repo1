@@ -287,9 +287,9 @@ export default function App() {
               </div>
               <h3 className="text-2xl font-semibold mb-8">Contacts Only</h3>
               <ul className="space-y-4 text-lg mb-12 text-black/70">
-                <li>• Find contacts</li>
-                <li>• Check fabric specs & MOQ</li>
-                <li>• You communicate directly</li>
+                <li>• 3-5 suppliers/manufacturers</li>
+                <li>• Pass contacts to you</li>
+                <li>• That's it</li>
               </ul>
               <a href="#contact" className="block w-full py-5 text-center border-2 border-black text-black hover:bg-black hover:text-white transition-all font-semibold text-sm tracking-wider">
                 GET STARTED
@@ -308,10 +308,10 @@ export default function App() {
               </div>
               <h3 className="text-2xl font-semibold mb-8">Full Research</h3>
               <ul className="space-y-4 text-lg mb-12">
-                <li>• 3-5 suppliers for your needs</li>
-                <li>• I communicate & clarify everything</li>
-                <li>• Pricing, MOQ, availability</li>
-                <li>• Ready-to-use info</li>
+                <li>• 3-5 suppliers/manufacturers</li>
+                <li>• I verify they actually do this</li>
+                <li>• I communicate fully about order/fabrics</li>
+                <li>• Pass info to you</li>
               </ul>
               <a href="#contact" className="block w-full py-5 text-center bg-white text-black hover:bg-gray-100 transition-all font-semibold text-sm tracking-wider">
                 START SOURCING
@@ -327,9 +327,8 @@ export default function App() {
               </div>
               <h3 className="text-2xl font-semibold mb-8">Order Management</h3>
               <ul className="space-y-4 text-lg mb-12 text-black/70">
-                <li>• Everything above</li>
-                <li>• I place the order for you</li>
-                <li>• Full order handling</li>
+                <li>• Full Research (€70) +</li>
+                <li>• I place & handle the order</li>
                 <li>• Delivered to you</li>
               </ul>
               <a href="#contact" className="block w-full py-5 text-center border-2 border-black text-black hover:bg-black hover:text-white transition-all font-semibold text-sm tracking-wider">
