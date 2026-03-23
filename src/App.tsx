@@ -279,7 +279,7 @@ export default function App() {
 
           <div className="grid md:grid-cols-3 gap-12">
             {/* Basic */}
-            <motion.div whileHover={{ y: -10 }} className="border-2 border-black/10 p-12 hover:border-black/30 transition-all">
+            <motion.div whileHover={{ y: -10 }} className="border-2 border-black/10 p-12 hover:border-black/30 transition-all rounded-2xl bg-white">
               <div className="text-xs tracking-[0.3em] uppercase mb-8 text-black/40">Basic</div>
               <div className="mb-12">
                 <div className="text-8xl font-bold mb-2" style={{fontFamily: "'Playfair Display', serif"}}>30</div>
@@ -297,17 +297,17 @@ export default function App() {
             </motion.div>
 
             {/* Standard - Featured */}
-            <motion.div whileHover={{ y: -10 }} className="bg-black text-white p-12 relative transform md:scale-105">
+            <motion.div whileHover={{ y: -10 }} className="bg-[#A8B5A0] text-white p-12 relative transform md:scale-105 rounded-2xl">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-white text-black text-xs font-bold tracking-wider">
                 MOST POPULAR
               </div>
-              <div className="text-xs tracking-[0.3em] uppercase mb-8 text-white/60">Standard</div>
+              <div className="text-xs tracking-[0.3em] uppercase mb-8 text-white/70">Standard</div>
               <div className="mb-12">
                 <div className="text-8xl font-bold mb-2" style={{fontFamily: "'Playfair Display', serif"}}>70</div>
-                <div className="text-2xl text-white/70">EUR</div>
+                <div className="text-2xl text-white/80">EUR</div>
               </div>
               <h3 className="text-2xl font-semibold mb-8">Full Service</h3>
-              <ul className="space-y-4 text-lg mb-12">
+              <ul className="space-y-4 text-lg mb-12 text-white/95">
                 <li>• Tailored options</li>
                 <li>• Full communication</li>
                 <li>• Pricing & MOQ clarity</li>
@@ -319,7 +319,7 @@ export default function App() {
             </motion.div>
 
             {/* Full Service */}
-            <motion.div whileHover={{ y: -10 }} className="border-2 border-black/10 p-12 hover:border-black/30 transition-all">
+            <motion.div whileHover={{ y: -10 }} className="border-2 border-black/10 p-12 hover:border-black/30 transition-all rounded-2xl bg-white">
               <div className="text-xs tracking-[0.3em] uppercase mb-8 text-black/40">Full Service</div>
               <div className="mb-12">
                 <div className="text-8xl font-bold mb-2" style={{fontFamily: "'Playfair Display', serif"}}>10<span className="text-5xl">%</span></div>
