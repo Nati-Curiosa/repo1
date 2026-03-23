@@ -322,15 +322,15 @@ export default function App() {
             <motion.div whileHover={{ y: -10 }} className="border-2 border-black/10 p-12 hover:border-black/30 transition-all rounded-2xl bg-white">
               <div className="text-xs tracking-[0.3em] uppercase mb-8 text-black/40">Full Service</div>
               <div className="mb-12">
-                <div className="text-8xl font-bold mb-2" style={{fontFamily: "'Playfair Display', serif"}}>10<span className="text-5xl">%</span></div>
-                <div className="text-2xl text-black/60">of order</div>
+                <div className="text-6xl font-bold mb-2 leading-tight" style={{fontFamily: "'Playfair Display', serif"}}>70<span className="text-4xl"> + 10%</span></div>
+                <div className="text-lg text-black/60">€70 + 10% of order value</div>
               </div>
               <h3 className="text-2xl font-semibold mb-8">End-to-End</h3>
               <ul className="space-y-4 text-lg mb-12 text-black/70">
-                <li>• Everything above</li>
+                <li>• Standard package +</li>
                 <li>• Order placement</li>
                 <li>• Quality control</li>
-                <li>• Delivery mgmt</li>
+                <li>• Delivery management</li>
               </ul>
               <a href="#contact" className="block w-full py-5 text-center border-2 border-black text-black hover:bg-black hover:text-white transition-all font-semibold text-sm tracking-wider">
                 LET'S TALK
