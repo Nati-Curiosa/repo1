@@ -48,7 +48,7 @@ export default function App() {
   const materials = [
     "Ramie", "Lyocell (Tencel)", "Organic Cotton", "Linen", "Hemp", "SeaCell", "Piñatex (Pineapple)", "Banana Fiber",
     "Kapok", "Biodegradable Interlining", "Plastic-Free Vegan Leather", "Mushroom Leather", "Deadstock Fabrics",
-    "Corozo Buttons", "Bio-resin Buttons", "Recycled Metal Zippers", "Organic Cotton Labels", "Natural Rubber Elastics"
+    "Corozo Buttons", "Organic Cotton Labels", "Natural Rubber Elastics"
   ];
 
   const skills = {
