@@ -150,54 +150,74 @@ export default function App() {
       </section>
 
       {/* Materials Keywords Section */}
-      <section className="py-20 bg-gray-50 px-8">
-        <div className="max-w-[1400px] mx-auto">
-          <p className="text-xs tracking-[0.3em] uppercase mb-12 text-center text-black/40 font-medium">Specialized Materials</p>
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-6">
-            {materials.map((item, idx) => (
-              <span key={idx} className="text-lg font-medium text-black/70 hover:text-black transition-colors cursor-default">
-                {item}
-              </span>
-            ))}
+      <section className="py-20 bg-[#F5EFE7] px-8 relative overflow-hidden">
+        {/* Decorative circles */}
+        <div className="absolute top-10 right-20 w-64 h-64 bg-[#D4A574] rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-80 h-80 bg-[#A8B5A0] rounded-full opacity-20 blur-3xl"></div>
+
+        <div className="max-w-[1400px] mx-auto relative z-10">
+          <p className="text-xs tracking-[0.3em] uppercase mb-8 text-center text-black/40 font-medium">Materials Expertise</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center" style={{fontFamily: "'Playfair Display', serif"}}>
+            I know where to find:
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-center leading-relaxed text-black/70">
+              {materials.join(", ")}
+            </p>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-32 bg-white px-8">
-        <div className="max-w-[1400px] mx-auto">
+      <section id="services" className="py-32 bg-white px-8 relative overflow-hidden">
+        {/* Decorative shapes */}
+        <div className="absolute top-20 left-10 w-96 h-96 bg-[#D4A5A5] rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-72 h-72 bg-[#A8B5A0] rounded-full opacity-20 blur-3xl"></div>
+
+        <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="text-center mb-24">
             <div className="text-sm tracking-[0.3em] uppercase mb-4 text-black/60">What I Do</div>
             <h2 className="text-6xl md:text-7xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Services</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            {services.map((service, idx) => (
-              <motion.div
-                key={idx}
-                whileHover={{ y: -10 }}
-                className="border-l-4 border-black pl-8 hover:border-gray-400 transition-all"
-              >
-                <div className="text-xs tracking-[0.3em] uppercase mb-4 text-black/40">{service.tag}</div>
-                <h3 className="text-3xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>{service.title}</h3>
-                <p className="text-lg text-black/70 leading-relaxed">
-                  {service.description}
-                </p>
-              </motion.div>
-            ))}
+          <div className="grid md:grid-cols-2 gap-8">
+            {services.map((service, idx) => {
+              const colors = ['#F5EFE7', '#D4A574', '#A8B5A0', '#D4A5A5'];
+              return (
+                <motion.div
+                  key={idx}
+                  whileHover={{ y: -10 }}
+                  className="relative p-12 rounded-3xl overflow-hidden"
+                  style={{backgroundColor: colors[idx]}}
+                >
+                  <div className="relative z-10">
+                    <div className="mb-6 opacity-70">{service.icon}</div>
+                    <div className="text-xs tracking-[0.3em] uppercase mb-4 text-black/50">{service.tag}</div>
+                    <h3 className="text-3xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>{service.title}</h3>
+                    <p className="text-lg text-black/80 leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Case Studies Section */}
-      <section className="py-32 bg-gray-50 px-8">
-        <div className="max-w-[1400px] mx-auto">
+      <section className="py-32 bg-[#F5EFE7] px-8 relative overflow-hidden">
+        {/* Decorative circles */}
+        <div className="absolute top-32 right-32 w-80 h-80 bg-[#D4A5A5] rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute bottom-10 left-20 w-96 h-96 bg-[#D4A574] rounded-full opacity-20 blur-3xl"></div>
+
+        <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="text-center mb-24">
             <div className="text-sm tracking-[0.3em] uppercase mb-4 text-black/60">Recent Work</div>
             <h2 className="text-6xl md:text-7xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Projects</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-12">
-            <motion.div whileHover={{ y: -10 }} className="bg-white overflow-hidden">
+            <motion.div whileHover={{ y: -10 }} className="bg-white overflow-hidden rounded-3xl">
               <div className="p-10">
                 <div className="text-xs tracking-[0.3em] uppercase mb-4 text-black/40">Fashion Brand</div>
                 <h3 className="text-3xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>SE VISTA</h3>
@@ -207,11 +227,11 @@ export default function App() {
                 <div className="flex flex-wrap gap-3 text-sm font-medium">
                   <span className="text-black/50">Ramie</span>
                   <span className="text-black/50">•</span>
-                  <span className="text-black/50">MOQ 50-100</span>
+                  <span className="text-black/50">1-12m per fabric</span>
                 </div>
               </div>
             </motion.div>
-            <motion.div whileHover={{ y: -10 }} className="bg-white overflow-hidden">
+            <motion.div whileHover={{ y: -10 }} className="bg-white overflow-hidden rounded-3xl">
               <div className="p-10">
                 <div className="text-xs tracking-[0.3em] uppercase mb-4 text-black/40">Hospitality</div>
                 <h3 className="text-3xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Restaurant</h3>
@@ -225,7 +245,7 @@ export default function App() {
                 </div>
               </div>
             </motion.div>
-            <motion.div whileHover={{ y: -10 }} className="bg-white overflow-hidden">
+            <motion.div whileHover={{ y: -10 }} className="bg-white overflow-hidden rounded-3xl">
               <div className="p-10">
                 <div className="text-xs tracking-[0.3em] uppercase mb-4 text-black/40">Creative</div>
                 <h3 className="text-3xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Photo Shoots</h3>
@@ -244,8 +264,12 @@ export default function App() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-32 bg-white px-8 border-t border-black/5">
-        <div className="max-w-[1400px] mx-auto">
+      <section className="py-32 bg-white px-8 border-t border-black/5 relative overflow-hidden">
+        {/* Decorative shapes */}
+        <div className="absolute top-10 left-32 w-80 h-80 bg-[#A8B5A0] rounded-full opacity-15 blur-3xl"></div>
+        <div className="absolute bottom-32 right-10 w-96 h-96 bg-[#D4A5A5] rounded-full opacity-15 blur-3xl"></div>
+
+        <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="text-center mb-24">
             <div className="text-sm tracking-[0.3em] uppercase mb-4 text-black/60">Investment</div>
             <h2 className="text-6xl md:text-7xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Pricing</h2>
@@ -316,8 +340,12 @@ export default function App() {
         </div>
       </section>
       {/* Featured Materials Section */}
-      <section className="py-32 bg-white px-8">
-        <div className="max-w-[1400px] mx-auto">
+      <section className="py-32 bg-white px-8 relative overflow-hidden">
+        {/* Decorative shapes */}
+        <div className="absolute top-20 right-10 w-80 h-80 bg-[#D4A574] rounded-full opacity-15 blur-3xl"></div>
+        <div className="absolute bottom-20 left-32 w-72 h-72 bg-[#F5EFE7] rounded-full opacity-40 blur-3xl"></div>
+
+        <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="text-center mb-24">
             <div className="text-sm tracking-[0.3em] uppercase mb-4 text-black/60">Recent Work</div>
             <h2 className="text-6xl md:text-7xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Fabrics We've Sourced</h2>
@@ -363,8 +391,12 @@ export default function App() {
 
       {/* Experience Section */}
       {/* About Section - Magazine Editorial Style */}
-      <section id="about" className="py-32 bg-gray-50 px-8">
-        <div className="max-w-[1400px] mx-auto">
+      <section id="about" className="py-32 bg-[#F5EFE7] px-8 relative overflow-hidden">
+        {/* Decorative shapes */}
+        <div className="absolute top-10 left-10 w-96 h-96 bg-[#A8B5A0] rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-[#D4A5A5] rounded-full opacity-20 blur-3xl"></div>
+
+        <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
               <div className="text-sm tracking-[0.3em] uppercase mb-6 text-black/60">About</div>
@@ -405,8 +437,12 @@ export default function App() {
         </div>
       </section>
       {/* Contact Section */}
-      <section id="contact" className="py-32 bg-gray-50 px-8">
-        <div className="max-w-[1400px] mx-auto">
+      <section id="contact" className="py-32 bg-white px-8 relative overflow-hidden">
+        {/* Decorative shapes */}
+        <div className="absolute top-32 right-10 w-80 h-80 bg-[#D4A574] rounded-full opacity-15 blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#A8B5A0] rounded-full opacity-15 blur-3xl"></div>
+
+        <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
               <div className="text-sm tracking-[0.3em] uppercase mb-6 text-black/60">Get in Touch</div>
@@ -501,7 +537,7 @@ export default function App() {
                     <label className="block text-xs tracking-wider uppercase mb-2 text-black/60">Message</label>
                     <textarea rows={5} className="w-full px-4 py-4 border-2 border-black/10 focus:border-black outline-none transition-all resize-none"></textarea>
                   </div>
-                  <button type="submit" className="w-full py-5 bg-black text-white hover:bg-blue-600 transition-all font-semibold text-sm tracking-wider">
+                  <button type="submit" className="w-full py-5 bg-black text-white hover:bg-gray-800 transition-all font-semibold text-sm tracking-wider">
                     SEND MESSAGE
                   </button>
                 </form>
