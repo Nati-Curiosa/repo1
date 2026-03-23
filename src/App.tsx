@@ -288,8 +288,8 @@ export default function App() {
               <h3 className="text-2xl font-semibold mb-8">Contacts Only</h3>
               <ul className="space-y-4 text-lg mb-12 text-black/70">
                 <li>• 3-5 suppliers/manufacturers</li>
+                <li>• I check their prices</li>
                 <li>• Pass contacts to you</li>
-                <li>• That's it</li>
               </ul>
               <a href="#contact" className="block w-full py-5 text-center border-2 border-black text-black hover:bg-black hover:text-white transition-all font-semibold text-sm tracking-wider">
                 GET STARTED
@@ -310,6 +310,7 @@ export default function App() {
               <ul className="space-y-4 text-lg mb-12">
                 <li>• 3-5 suppliers/manufacturers</li>
                 <li>• I verify they actually do this</li>
+                <li>• I check their prices</li>
                 <li>• I communicate fully about order/fabrics</li>
                 <li>• Pass info to you</li>
               </ul>
