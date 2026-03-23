@@ -282,7 +282,7 @@ export default function App() {
             <motion.div whileHover={{ y: -10 }} className="border-2 border-black/10 p-12 hover:border-black/30 transition-all rounded-2xl bg-white">
               <div className="text-xs tracking-[0.3em] uppercase mb-8 text-black/40">Basic</div>
               <div className="mb-12">
-                <div className="text-8xl font-bold mb-2" style={{fontFamily: "'Playfair Display', serif"}}>30</div>
+                <div className="text-8xl font-bold mb-2" style={{fontFamily: "'Playfair Display', serif"}}>150</div>
                 <div className="text-2xl text-black/60">EUR</div>
               </div>
               <h3 className="text-2xl font-semibold mb-8">Contacts Only</h3>
@@ -303,7 +303,7 @@ export default function App() {
               </div>
               <div className="text-xs tracking-[0.3em] uppercase mb-8 text-white/80">Standard</div>
               <div className="mb-12">
-                <div className="text-8xl font-bold mb-2" style={{fontFamily: "'Playfair Display', serif"}}>70</div>
+                <div className="text-8xl font-bold mb-2" style={{fontFamily: "'Playfair Display', serif"}}>300</div>
                 <div className="text-2xl text-white/80">EUR</div>
               </div>
               <h3 className="text-2xl font-semibold mb-8">Full Research</h3>
@@ -323,12 +323,12 @@ export default function App() {
             <motion.div whileHover={{ y: -10 }} className="border-2 border-black/10 p-12 hover:border-black/30 transition-all rounded-2xl bg-white">
               <div className="text-xs tracking-[0.3em] uppercase mb-8 text-black/40">Full Service</div>
               <div className="mb-12">
-                <div className="text-6xl font-bold mb-2 leading-tight" style={{fontFamily: "'Playfair Display', serif"}}>70<span className="text-4xl"> + 10%</span></div>
-                <div className="text-lg text-black/60">€70 + 10% of order value</div>
+                <div className="text-6xl font-bold mb-2 leading-tight" style={{fontFamily: "'Playfair Display', serif"}}>300<span className="text-4xl"> + 10%</span></div>
+                <div className="text-lg text-black/60">€300 + 10% of order value</div>
               </div>
               <h3 className="text-2xl font-semibold mb-8">Order Management</h3>
               <ul className="space-y-4 text-lg mb-12 text-black/70">
-                <li>• Full Research (€70) +</li>
+                <li>• Full Research (€300) +</li>
                 <li>• I place & handle the order</li>
                 <li>• Delivered to you</li>
               </ul>
