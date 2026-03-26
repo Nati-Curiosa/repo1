@@ -8,8 +8,7 @@ export default function App() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
 
-  // Replace this with your actual Calendly URL
-  const calendlyUrl = "https://calendly.com/natalia-korelina/15min";
+  const calendlyUrl = "https://calendly.com/natalia-k-sevista/new-meeting";
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
