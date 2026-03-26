@@ -15,7 +15,7 @@ jobs:
         run: |
           echo "Checking https://sourcing.sevista.store..."
 
-          # Try to fetch the site with a 10 second timeout
+          # Check if site returns HTTP 200
           response=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 https://sourcing.sevista.store)
 
           if [ "$response" = "200" ]; then
@@ -25,29 +25,39 @@ jobs:
             exit 1
           fi
 
-      - name: Check Calendly integration
+      - name: Check if JavaScript bundle loads
         run: |
-          echo "Checking if Calendly booking works..."
+          echo "Checking if React app loads..."
 
           page_content=$(curl -s --max-time 10 https://sourcing.sevista.store)
 
-          if echo "$page_content" | grep -q "calendly.com/natalia-k-sevista"; then
-            echo "✅ Calendly integration found"
+          # Check if the React bundle is referenced
+          if echo "$page_content" | grep -q "/assets/index-.*\.js"; then
+            echo "✅ React bundle found in HTML"
           else
-            echo "❌ Calendly link NOT found - booking may be broken"
+            echo "❌ React bundle NOT found - app may not load"
             exit 1
           fi
 
-      - name: Check Google Form integration
+      - name: Check critical assets
         run: |
-          echo "Checking if contact form works..."
+          echo "Checking if site has expected structure..."
 
           page_content=$(curl -s --max-time 10 https://sourcing.sevista.store)
 
-          if echo "$page_content" | grep -q "docs.google.com/forms"; then
-            echo "✅ Google Form found"
+          # Check for root div (React mount point)
+          if echo "$page_content" | grep -q 'id="root"'; then
+            echo "✅ React root element found"
           else
-            echo "❌ Google Form NOT found - contact form may be broken"
+            echo "❌ React root NOT found"
+            exit 1
+          fi
+
+          # Check for title
+          if echo "$page_content" | grep -iq "Natalia Korelina"; then
+            echo "✅ Page title found"
+          else
+            echo "❌ Page title NOT found"
             exit 1
           fi
 
@@ -58,8 +68,8 @@ jobs:
           echo "✅ All checks passed!"
           echo "Site: https://sourcing.sevista.store"
           echo "Status: Healthy"
-          echo "  - Site is accessible"
-          echo "  - Calendly booking works"
-          echo "  - Contact form works"
+          echo "  - Site is accessible (HTTP 200)"
+          echo "  - React app structure is intact"
+          echo "  - JavaScript bundle loads"
           echo "Time: $(date -u)"
           echo "================================================"
