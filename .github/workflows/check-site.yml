@@ -33,7 +33,7 @@ jobs:
           page_content=$(curl -s --max-time 10 https://sourcing.sevista.store)
 
           # Check for key content that should be on the page
-          if echo "$page_content" | grep -q "NATALIA KORELINA"; then
+          if echo "$page_content" | grep -iq "Natalia Korelina"; then
             echo "✅ Main heading found"
           else
             echo "❌ Main heading NOT found - page may be broken"
