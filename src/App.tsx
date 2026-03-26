@@ -1,21 +1,13 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
-import { Leaf, MapPin, Globe, CheckCircle2, Mail, Linkedin, Menu, X, Award, Languages, Cpu, Calendar } from "lucide-react";
+import { Leaf, MapPin, Globe, Mail, Linkedin, Menu, X, Calendar } from "lucide-react";
 import { PopupModal } from "react-calendly";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
 
   const calendlyUrl = "https://calendly.com/natalia-k-sevista/new-meeting";
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // In a real app, you'd send this to a backend
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 5000);
-  };
 
   const services = [
     {
@@ -491,58 +483,20 @@ export default function App() {
               </div>
             </div>
 
-            <div className="bg-white text-black p-12">
+            <div className="bg-white text-black p-8 rounded-2xl">
               <h3 className="text-3xl font-bold mb-8" style={{fontFamily: "'Playfair Display', serif"}}>Send a Message</h3>
 
-              {isSubmitted ? (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="flex flex-col items-center justify-center py-12 text-center"
-                >
-                  <div className="w-20 h-20 bg-black text-white flex items-center justify-center mb-6">
-                    <CheckCircle2 className="w-10 h-10" />
-                  </div>
-                  <h4 className="text-2xl font-bold mb-4" style={{fontFamily: "'Playfair Display', serif"}}>Message Sent</h4>
-                  <p className="text-black/60 mb-8">I'll get back to you within 24-48 hours.</p>
-                  <button
-                    onClick={() => setIsSubmitted(false)}
-                    className="text-sm tracking-wider underline hover:no-underline"
-                  >
-                    Send another message
-                  </button>
-                </motion.div>
-              ) : (
-                <form className="space-y-6" onSubmit={handleSubmit}>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-xs tracking-wider uppercase mb-2 text-black/60">Name</label>
-                      <input type="text" className="w-full px-4 py-4 border-2 border-black/10 focus:border-black outline-none transition-all" required />
-                    </div>
-                    <div>
-                      <label className="block text-xs tracking-wider uppercase mb-2 text-black/60">Email</label>
-                      <input type="email" className="w-full px-4 py-4 border-2 border-black/10 focus:border-black outline-none transition-all" required />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-xs tracking-wider uppercase mb-2 text-black/60">Project Type</label>
-                    <select className="w-full px-4 py-4 border-2 border-black/10 focus:border-black outline-none transition-all">
-                      <option>Fabric Sourcing</option>
-                      <option>Manufacturer Search</option>
-                      <option>Trimmings & Hardware</option>
-                      <option>Full Production</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-xs tracking-wider uppercase mb-2 text-black/60">Message</label>
-                    <textarea rows={5} className="w-full px-4 py-4 border-2 border-black/10 focus:border-black outline-none transition-all resize-none"></textarea>
-                  </div>
-                  <button type="submit" className="w-full py-5 bg-black text-white hover:bg-gray-800 transition-all font-semibold text-sm tracking-wider">
-                    SEND MESSAGE
-                  </button>
-                </form>
-              )}
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSddkL5lK_uB_J7a_N18RJ2cFV8qWgyYPosB5dNdIOcPhVB6xQ/viewform?embedded=true"
+                width="100%"
+                height="900"
+                frameBorder="0"
+                marginHeight={0}
+                marginWidth={0}
+                className="w-full"
+              >
+                Loading…
+              </iframe>
             </div>
           </div>
         </div>
