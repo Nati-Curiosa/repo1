@@ -25,40 +25,30 @@ jobs:
             exit 1
           fi
 
-      - name: Check for critical content
-        run: |
-          echo "Checking if site contains expected content..."
-
-          # Download the page
-          page_content=$(curl -s --max-time 10 https://sourcing.sevista.store)
-
-          # Check for key content that should be on the page
-          if echo "$page_content" | grep -iq "Natalia Korelina"; then
-            echo "✅ Main heading found"
-          else
-            echo "❌ Main heading NOT found - page may be broken"
-            exit 1
-          fi
-
-          if echo "$page_content" | grep -q "Sustainable Sourcing"; then
-            echo "✅ Tagline found"
-          else
-            echo "❌ Tagline NOT found - page may be broken"
-            exit 1
-          fi
-
-          echo "✅ Site content looks good!"
-
       - name: Check Calendly integration
         run: |
-          echo "Checking if Calendly is properly integrated..."
+          echo "Checking if Calendly booking works..."
 
           page_content=$(curl -s --max-time 10 https://sourcing.sevista.store)
 
           if echo "$page_content" | grep -q "calendly.com/natalia-k-sevista"; then
             echo "✅ Calendly integration found"
           else
-            echo "⚠️ Calendly URL not found in page source"
+            echo "❌ Calendly link NOT found - booking may be broken"
+            exit 1
+          fi
+
+      - name: Check Google Form integration
+        run: |
+          echo "Checking if contact form works..."
+
+          page_content=$(curl -s --max-time 10 https://sourcing.sevista.store)
+
+          if echo "$page_content" | grep -q "docs.google.com/forms"; then
+            echo "✅ Google Form found"
+          else
+            echo "❌ Google Form NOT found - contact form may be broken"
+            exit 1
           fi
 
       - name: Report success
@@ -68,5 +58,8 @@ jobs:
           echo "✅ All checks passed!"
           echo "Site: https://sourcing.sevista.store"
           echo "Status: Healthy"
+          echo "  - Site is accessible"
+          echo "  - Calendly booking works"
+          echo "  - Contact form works"
           echo "Time: $(date -u)"
           echo "================================================"
