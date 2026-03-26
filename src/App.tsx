@@ -308,7 +308,7 @@ export default function App() {
               <div className="mb-8 p-4 bg-gray-50 rounded-xl border border-black/5">
                 <p className="text-sm font-semibold mb-2 text-black">When this works for you:</p>
                 <p className="text-sm text-black/70 leading-relaxed">
-                  Perfect if suppliers have websites where you can register and place orders directly. You'll need time to communicate (usually in English). Suppliers with websites typically have English-speaking support, clear stock info, and transparent MOQs.
+                  Perfect if suppliers have websites where you can register and place orders directly. Suppliers with websites typically have English-speaking support, clear stock info, and transparent MOQs.
                 </p>
               </div>
 
