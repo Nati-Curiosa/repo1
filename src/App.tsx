@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
-import { Leaf, MapPin, Globe, Mail, Linkedin, Menu, X, Calendar } from "lucide-react";
+import { Leaf, MapPin, Globe, Mail, Linkedin, Menu, X, Calendar, CheckCircle2, Cpu } from "lucide-react";
 import { PopupModal } from "react-calendly";
 
 export default function App() {
