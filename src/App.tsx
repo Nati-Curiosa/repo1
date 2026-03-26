@@ -263,7 +263,7 @@ export default function App() {
                   <strong className="text-black">What I did:</strong> Showed fabric samples and possibilities. Provided consultation on materials for weddings/events. Connected client with wholesale suppliers. Passed verified contacts.
                 </p>
                 <p className="text-base text-black/70 leading-relaxed mb-6">
-                  <strong className="text-black">Result:</strong> Client gained EU wholesale access without business registration requirements
+                  <strong className="text-black">Result:</strong> Client gained access to EU wholesale B2B suppliers
                 </p>
                 <div className="flex flex-wrap gap-3 text-sm font-medium">
                   <span className="text-black/50">€2-5/m</span>
