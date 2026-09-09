@@ -64,7 +64,7 @@ export default function App() {
             <span className="text-xs tracking-wider text-black/50 uppercase">Sourcing & Product Services • Portugal & EU</span>
           </div>
 
-          <div className="hidden md:flex items-center gap-6 md:p-8 text-sm font-medium tracking-wide">
+          <div className="hidden md:flex items-center gap-6 md:gap-8 text-sm font-medium tracking-wide">
             <a href="#services" className="hover:text-gray-600 transition-colors">Services</a>
             <a href="#about" className="hover:text-gray-600 transition-colors">About</a>
             <a href="#contact" className="px-6 py-3 bg-black text-white hover:bg-gray-800 transition-all">Contact</a>
@@ -354,7 +354,7 @@ export default function App() {
             <div className="text-sm tracking-[0.3em] uppercase mb-4 text-black/60">Recent Work</div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Fabrics We've Sourced</h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 md:p-8">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {[
               {
                 name: "Ramie",
@@ -402,7 +402,7 @@ export default function App() {
         <div className="absolute bottom-20 right-20 w-80 h-80 bg-[#D4A5A5] rounded-full opacity-20 blur-3xl"></div>
 
         <div className="max-w-[1120px] mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-6 md:p-8 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-6 md:gap-8 items-center">
             <div>
               <div className="text-sm tracking-[0.3em] uppercase mb-6 text-black/60">About</div>
               <h2 className="text-3xl md:text-4xl font-bold mb-12 leading-tight" style={{fontFamily: "'Playfair Display', serif"}}>
@@ -448,7 +448,7 @@ export default function App() {
         <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#A8B5A0] rounded-full opacity-15 blur-3xl"></div>
 
         <div className="max-w-[1120px] mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-6 md:p-8 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-6 md:gap-8 items-center">
             <div>
               <div className="text-sm tracking-[0.3em] uppercase mb-6 text-black/60">Get in Touch</div>
               <h2 className="text-3xl md:text-4xl font-bold mb-12 leading-tight" style={{fontFamily: "'Playfair Display', serif"}}>
