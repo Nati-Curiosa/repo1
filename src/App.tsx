@@ -70,7 +70,7 @@ export default function App() {
             <a href="#contact" className="px-6 py-3 bg-black text-white hover:bg-gray-800 transition-all">Contact</a>
           </div>
 
-          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button aria-label={isMenuOpen ? "Close navigation" : "Open navigation"} aria-expanded={isMenuOpen} className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X /> : <Menu />}
           </button>
         </div>
@@ -98,14 +98,15 @@ export default function App() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
         <motion.div
-          initial={{ scale: 1.1 }}
+          initial={false}
           animate={{ scale: 1 }}
           transition={{ duration: 1.5 }}
           className="absolute inset-0"
         >
           <img
             src="https://images.weserv.nl/?url=https://lh3.googleusercontent.com/d/11_UR3ERzCi2L5qAQWpmakzX1qVBJMGnt&w=1600"
-            alt="Natural Fabric Texture"
+            alt=""
+            fetchPriority="high"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
@@ -114,7 +115,7 @@ export default function App() {
 
         <div className="relative z-10 max-w-[1400px] mx-auto px-8 text-center text-white">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
@@ -125,7 +126,7 @@ export default function App() {
               Sustainable Sourcing<br/>&amp; Product Services
             </h1>
             <p className="text-xl md:text-2xl max-w-2xl mx-auto mb-12 font-light leading-relaxed">
-              Natural and innovative fabrics, tech packs, small-batch production, QC and logistics. Based in Lisbon, working with international fashion, home and hospitality brands.
+              Fabric sourcing in Portugal and the EU, tech packs, small-batch production, quality control and logistics. Based in Lisbon, working with international fashion, home and hospitality brands.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               <a href="#contact" className="px-10 py-5 bg-white text-black font-semibold hover:bg-gray-100 transition-all text-lg">
@@ -142,6 +143,7 @@ export default function App() {
         </div>
       </section>
 
+      <main>
       {/* Materials Keywords Section */}
       <section className="py-20 bg-[#F5EFE7] px-8 relative overflow-hidden">
         {/* Decorative circles */}
@@ -170,7 +172,7 @@ export default function App() {
         <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="text-center mb-24">
             <div className="text-sm tracking-[0.3em] uppercase mb-4 text-black/60">What I Do</div>
-            <h2 className="text-6xl md:text-7xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Services</h2>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Sourcing &amp; Product Development Services</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -207,7 +209,7 @@ export default function App() {
         <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="text-center mb-24">
             <div className="text-sm tracking-[0.3em] uppercase mb-4 text-black/60">Recent Work</div>
-            <h2 className="text-6xl md:text-7xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Projects</h2>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Sourcing Projects in Portugal &amp; the EU</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-12">
             <motion.div whileHover={{ y: -10 }} className="bg-white overflow-hidden rounded-3xl">
@@ -283,7 +285,7 @@ export default function App() {
         <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="text-center mb-16">
             <div className="text-sm tracking-[0.3em] uppercase mb-4 text-black/60">Investment</div>
-            <h2 className="text-6xl md:text-7xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Pricing</h2>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Pricing</h2>
             <p className="text-xl text-black/70">Standalone services from €200. Sourcing projects from €500.</p>
           </div>
           <div className="grid lg:grid-cols-3 gap-8 items-stretch">
@@ -357,7 +359,7 @@ export default function App() {
         <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="text-center mb-24">
             <div className="text-sm tracking-[0.3em] uppercase mb-4 text-black/60">Recent Work</div>
-            <h2 className="text-6xl md:text-7xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Fabrics We've Sourced</h2>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Fabrics We've Sourced</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-12">
             {[
@@ -384,6 +386,7 @@ export default function App() {
               >
                 <div className="aspect-[3/4] overflow-hidden mb-6">
                   <img
+                    loading="lazy" decoding="async"
                     src={material.img.startsWith('/') || material.img.includes('unsplash') ? material.img : `https://images.weserv.nl/?url=${material.img}&w=800`}
                     alt={material.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -434,12 +437,12 @@ export default function App() {
 
             <div className="grid grid-cols-2 gap-6">
               <div className="space-y-6">
-                <img src="/natalia-professional.jpg" className="w-full aspect-[3/4] object-cover rounded-2xl" alt="Natalia Korelina - Sustainable Sourcing and Product Services" />
-                <img src="/linen-fabric.jpg" className="w-full aspect-square object-cover rounded-2xl" alt="Natural Linen Fabric" />
+                <img loading="lazy" decoding="async" src="/natalia-professional.jpg" className="w-full aspect-[3/4] object-cover rounded-2xl" alt="Natalia Korelina - Sustainable Sourcing and Product Services" />
+                <img loading="lazy" decoding="async" src="/linen-fabric.jpg" className="w-full aspect-square object-cover rounded-2xl" alt="Natural Linen Fabric" />
               </div>
               <div className="space-y-6 pt-12">
-                <img src="https://images.weserv.nl/?url=https://lh3.googleusercontent.com/d/1ta63uQL4qdzsbK0k7UzPbhAHKyIXnmy7&w=600" className="w-full aspect-square object-cover rounded-2xl" referrerPolicy="no-referrer" alt="Ramie Textile" />
-                <img src="/lyocell-fabric-1.jpg" className="w-full aspect-[3/4] object-cover rounded-2xl" alt="Lyocell Fabric" />
+                <img loading="lazy" decoding="async" src="https://images.weserv.nl/?url=https://lh3.googleusercontent.com/d/1ta63uQL4qdzsbK0k7UzPbhAHKyIXnmy7&w=600" className="w-full aspect-square object-cover rounded-2xl" referrerPolicy="no-referrer" alt="Ramie Textile" />
+                <img loading="lazy" decoding="async" src="/lyocell-fabric-1.jpg" className="w-full aspect-[3/4] object-cover rounded-2xl" alt="Lyocell Fabric" />
               </div>
             </div>
           </div>
@@ -503,6 +506,8 @@ export default function App() {
               <h3 className="text-3xl font-bold mb-8" style={{fontFamily: "'Playfair Display', serif"}}>Send a Message</h3>
 
               <iframe
+                title="Sourcing and product development enquiry form"
+                loading="lazy"
                 src="https://docs.google.com/forms/d/e/1FAIpQLSddkL5lK_uB_J7a_N18RJ2cFV8qWgyYPosB5dNdIOcPhVB6xQ/viewform?embedded=true"
                 width="100%"
                 height="900"
@@ -517,6 +522,7 @@ export default function App() {
           </div>
         </div>
       </section>
+      </main>
       {/* Footer */}
       <footer className="py-16 px-8 bg-white border-t border-black/5">
         <div className="max-w-[1400px] mx-auto text-center">
@@ -527,12 +533,12 @@ export default function App() {
       </footer>
 
       {/* Calendly Modal */}
-      <PopupModal
+      {isCalendlyOpen && <PopupModal
         url={calendlyUrl}
         onModalClose={() => setIsCalendlyOpen(false)}
         open={isCalendlyOpen}
         rootElement={document.getElementById("root")!}
-      />
+      />}
     </div>
   );
 }
