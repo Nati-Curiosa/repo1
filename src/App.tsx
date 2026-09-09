@@ -11,26 +11,26 @@ export default function App() {
 
   const services = [
     {
-      title: "Natural Fabric Sourcing",
-      description: "Finding eco-friendly and natural fabrics across the EU. Specializing in ramie, lyocell, organic cotton, and linen.",
+      title: "Fabric & Trims Sourcing",
+      description: "Natural and innovative fabrics, trims and packaging from suppliers across the EU. Low-MOQ options from 1–12 metres, depending on the material and supplier.",
       icon: <Leaf className="w-6 h-6" />,
       tag: "EU-wide"
     },
     {
       title: "Manufacturer Search",
-      description: "Identifying Portuguese clothing manufacturers that accept small-batch production (low Minimum Order Quantities).",
+      description: "Find Portuguese manufacturers and ateliers suited to your product, budget and production volume, including small-batch options.",
       icon: <MapPin className="w-6 h-6" />,
       tag: "Portugal"
     },
     {
-      title: "Trimmings & Hardware",
-      description: "Sourcing sustainable buttons, zippers, labels, and packaging that align with your brand's ethical values.",
+      title: "Tech Packs",
+      description: "Factory-ready product documentation covering materials, measurements, trims and construction details. Available as a standalone service or as part of a full-cycle project.",
       icon: <Cpu className="w-6 h-6" />,
-      tag: "Accessories"
+      tag: "Product Development"
     },
     {
-      title: "Full Support & QC",
-      description: "End-to-end production management, from supplier lists to final quality control inspections on-site.",
+      title: "Production, QC & Logistics",
+      description: "Production coordination, quality control and delivery support, with supplier communication in English and Portuguese. One point of contact from sampling to shipment.",
       icon: <CheckCircle2 className="w-6 h-6" />,
       tag: "Full Cycle"
     }
@@ -61,7 +61,7 @@ export default function App() {
         <div className="max-w-[1400px] mx-auto px-8 h-24 flex items-center justify-between">
           <div className="flex flex-col">
             <span className="text-xl font-bold tracking-tight" style={{fontFamily: "'Playfair Display', serif"}}>NATALIA KORELINA</span>
-            <span className="text-xs tracking-wider text-black/50 uppercase">Sustainable Sourcing • Portugal & EU</span>
+            <span className="text-xs tracking-wider text-black/50 uppercase">Sourcing & Product Services • Portugal & EU</span>
           </div>
 
           <div className="hidden md:flex items-center gap-12 text-sm font-medium tracking-wide">
@@ -121,11 +121,11 @@ export default function App() {
             <div className="mb-6 text-sm tracking-[0.3em] uppercase font-medium">
               Lisbon • Portugal • EU
             </div>
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-[0.9]" style={{fontFamily: "'Playfair Display', serif"}}>
-              Sourcing<br/>Natural<br/>Fabrics
+            <h1 className="text-4xl sm:text-6xl lg:text-8xl font-bold mb-8 leading-[1.05]" style={{fontFamily: "'Playfair Display', serif"}}>
+              Sustainable Sourcing<br/>&amp; Product Services
             </h1>
             <p className="text-xl md:text-2xl max-w-2xl mx-auto mb-12 font-light leading-relaxed">
-              Your bridge to ethical production in Portugal and across Europe
+              Natural and innovative fabrics, tech packs, small-batch production, QC and logistics. Based in Lisbon, working with international fashion, home and hospitality brands.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               <a href="#contact" className="px-10 py-5 bg-white text-black font-semibold hover:bg-gray-100 transition-all text-lg">
@@ -215,13 +215,13 @@ export default function App() {
                 <div className="text-xs tracking-[0.3em] uppercase mb-4 text-black/40">Fashion Brand</div>
                 <h3 className="text-3xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>SE VISTA</h3>
                 <p className="text-base text-black/70 leading-relaxed mb-4">
-                  <strong className="text-black">Challenge:</strong> Launch sustainable fashion brand with natural fabrics and ethical production in Portugal
+                  <strong className="text-black">Result:</strong> Built a working supply chain for 25+ garment styles across 5–6 collections, with three Portuguese ateliers and access to low-MOQ materials.
                 </p>
                 <p className="text-base text-black/70 leading-relaxed mb-4">
-                  <strong className="text-black">What I did:</strong> Sourced 10+ suppliers across EU and Portugal for ramie, lyocell, organic cotton, hemp, deadstock fabrics. Found specialized suppliers for plastic-free threads, corozo/shell/metal buttons, organic labels. Coordinated production with 3 main manufacturers accepting 1-5 piece MOQs. Managed 5-6 collections with 20+ unique garments each.
+                  <strong className="text-black">Challenge:</strong> Launch sustainable fashion brand with natural fabrics and ethical production in Portugal
                 </p>
                 <p className="text-base text-black/70 leading-relaxed mb-6">
-                  <strong className="text-black">Result:</strong> Established full supply chain with consistent quality and ethical standards
+                  <strong className="text-black">What I did:</strong> Sourced 10+ suppliers across EU and Portugal for ramie, lyocell, organic cotton, hemp, deadstock fabrics. Found specialized suppliers for plastic-free threads, corozo/shell/metal buttons, organic labels. Coordinated production with 3 main manufacturers accepting 1-5 piece MOQs. Developed 25+ garment styles across 5–6 collections.
                 </p>
                 <div className="flex flex-wrap gap-3 text-sm font-medium">
                   <span className="text-black/50">10+ suppliers</span>
@@ -237,13 +237,13 @@ export default function App() {
                 <div className="text-xs tracking-[0.3em] uppercase mb-4 text-black/40">Hospitality</div>
                 <h3 className="text-3xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Restaurant Outdoor Seating</h3>
                 <p className="text-base text-black/70 leading-relaxed mb-4">
-                  <strong className="text-black">Challenge:</strong> Find custom cushions for outdoor use — waterproof, quick-drying, removable covers, minimal cost
+                  <strong className="text-black">Result:</strong> 40 custom waterproof cushions delivered in 2 weeks with full specifications
                 </p>
                 <p className="text-base text-black/70 leading-relaxed mb-4">
-                  <strong className="text-black">What I did:</strong> Researched Lisbon manufacturers. Coordinated communication between client and supplier. Organized calls, emails, fabric selection. Arranged samples and custom quotes. Created unified aesthetic solution within budget.
+                  <strong className="text-black">Challenge:</strong> Find custom cushions for outdoor use — waterproof, quick-drying, removable covers, minimal cost
                 </p>
                 <p className="text-base text-black/70 leading-relaxed mb-6">
-                  <strong className="text-black">Result:</strong> 40 custom waterproof cushions delivered in 2 weeks with full specifications
+                  <strong className="text-black">What I did:</strong> Researched Lisbon manufacturers. Coordinated communication between client and supplier. Organized calls, emails, fabric selection. Arranged samples and custom quotes. Created unified aesthetic solution within budget.
                 </p>
                 <div className="flex flex-wrap gap-3 text-sm font-medium">
                   <span className="text-black/50">40 custom pieces</span>
@@ -257,13 +257,13 @@ export default function App() {
                 <div className="text-xs tracking-[0.3em] uppercase mb-4 text-black/40">Events & Weddings</div>
                 <h3 className="text-3xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Event Decorations</h3>
                 <p className="text-base text-black/70 leading-relaxed mb-4">
-                  <strong className="text-black">Challenge:</strong> Connect creative professional with affordable fabric suppliers for event decoration
+                  <strong className="text-black">Result:</strong> Enabled independent repeat purchasing from EU fabric wholesalers at €2–5/m, with minimum orders from 1–2 metres.
                 </p>
                 <p className="text-base text-black/70 leading-relaxed mb-4">
-                  <strong className="text-black">What I did:</strong> Showed fabric samples and possibilities. Provided consultation on materials for weddings/events. Connected client with wholesale suppliers. Passed verified contacts.
+                  <strong className="text-black">Challenge:</strong> Connect creative professional with affordable fabric suppliers for event decoration
                 </p>
                 <p className="text-base text-black/70 leading-relaxed mb-6">
-                  <strong className="text-black">Result:</strong> Client gained access to EU wholesale B2B suppliers
+                  <strong className="text-black">What I did:</strong> Showed fabric samples and possibilities. Provided consultation on materials for weddings/events. Connected client with wholesale suppliers. Passed verified contacts.
                 </p>
                 <div className="flex flex-wrap gap-3 text-sm font-medium">
                   <span className="text-black/50">€2-5/m</span>
@@ -277,112 +277,75 @@ export default function App() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-32 bg-[#F5EFE7] px-8 border-t border-black/5 relative overflow-hidden">
-        {/* Decorative shapes */}
+      <section id="pricing" className="py-32 bg-[#F5EFE7] px-6 sm:px-8 border-t border-black/5 relative overflow-hidden">
         <div className="absolute top-10 left-32 w-80 h-80 bg-[#A8B5A0] rounded-full opacity-15 blur-3xl"></div>
         <div className="absolute bottom-32 right-10 w-96 h-96 bg-[#D4A5A5] rounded-full opacity-15 blur-3xl"></div>
-
         <div className="max-w-[1400px] mx-auto relative z-10">
-          <div className="text-center mb-24">
+          <div className="text-center mb-16">
             <div className="text-sm tracking-[0.3em] uppercase mb-4 text-black/60">Investment</div>
             <h2 className="text-6xl md:text-7xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Pricing</h2>
+            <p className="text-xl text-black/70">Standalone services from €200. Sourcing projects from €500.</p>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-12">
-            {/* Basic */}
-            <motion.div whileHover={{ y: -10 }} className="border-2 border-black/10 p-12 hover:border-black/30 transition-all rounded-2xl bg-white">
-              <div className="text-xs tracking-[0.3em] uppercase mb-8 text-black/40">Basic</div>
-              <div className="mb-12">
-                <div className="text-8xl font-bold mb-2" style={{fontFamily: "'Playfair Display', serif"}}>150</div>
-                <div className="text-2xl text-black/60">EUR</div>
-              </div>
-              <h3 className="text-2xl font-semibold mb-8">Contacts Only</h3>
-              <ul className="space-y-4 text-base mb-8 text-black/70">
-                <li>• Find 3-5 verified suppliers/manufacturers <strong className="text-black">matching your specific criteria</strong></li>
-                <li>• Verify they have what you need in stock</li>
-                <li>• Check pricing & MOQ availability</li>
-                <li>• Pass verified contacts directly to you</li>
-                <li>• <strong className="text-black">You handle all communication yourself</strong></li>
-              </ul>
-
-              <div className="mb-8 p-4 bg-gray-50 rounded-xl border border-black/5">
-                <p className="text-sm font-semibold mb-2 text-black">When this works for you:</p>
-                <p className="text-sm text-black/70 leading-relaxed">
-                  Perfect if suppliers have websites where you can register and place orders directly. Suppliers with websites typically have English-speaking support, clear stock info, and transparent MOQs.
-                </p>
-              </div>
-
-              <a href="#contact" className="block w-full py-5 text-center border-2 border-black text-black hover:bg-black hover:text-white transition-all font-semibold text-sm tracking-wider">
-                GET STARTED
-              </a>
-            </motion.div>
-
-            {/* Standard - Featured */}
-            <motion.div whileHover={{ y: -10 }} className="bg-[#A8B5A0] text-white p-12 relative transform md:scale-105 rounded-2xl">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-white text-black text-xs font-bold tracking-wider">
-                MOST POPULAR
-              </div>
-              <div className="text-xs tracking-[0.3em] uppercase mb-8 text-white/80">Standard</div>
-              <div className="mb-12">
-                <div className="text-8xl font-bold mb-2" style={{fontFamily: "'Playfair Display', serif"}}>300</div>
-                <div className="text-2xl text-white/80">EUR</div>
-              </div>
-              <h3 className="text-2xl font-semibold mb-8">Full Research</h3>
-              <ul className="space-y-4 text-base mb-8">
-                <li>• <strong>Everything in Basic +</strong></li>
-                <li>• I <strong>make phone calls</strong> to suppliers (many don't respond to emails)</li>
-                <li>• Verify fabric specs & availability in detail</li>
-                <li>• Negotiate initial pricing on your behalf</li>
-                <li>• Can request samples for you</li>
-                <li>• Provide <strong>detailed report</strong> with all findings & recommendations</li>
-                <li>• <strong>I handle all communication, you receive ready-to-use information</strong></li>
-              </ul>
-
-              <div className="mb-8 p-4 bg-white/10 rounded-xl border border-white/20">
-                <p className="text-sm font-semibold mb-2">When this works for you:</p>
-                <p className="text-sm text-white/90 leading-relaxed">
-                  I recommend this if you're looking for small-to-medium MOQ manufacturing in Portugal or Europe. These manufacturers either have minimal websites or none at all. On average, correspondence takes 2+ weeks, sometimes longer. <strong>Hiring me saves you time</strong> because I have established relationships. Cold contacts may go unanswered for weeks.
-                </p>
-              </div>
-
-              <a href="#contact" className="block w-full py-5 text-center bg-white text-black hover:bg-gray-100 transition-all font-semibold text-sm tracking-wider">
-                START SOURCING
-              </a>
-            </motion.div>
-
-            {/* Full Service */}
-            <motion.div whileHover={{ y: -10 }} className="border-2 border-black/10 p-12 hover:border-black/30 transition-all rounded-2xl bg-white">
-              <div className="text-xs tracking-[0.3em] uppercase mb-8 text-black/40">Full Service</div>
-              <div className="mb-12">
-                <div className="text-6xl font-bold mb-2 leading-tight" style={{fontFamily: "'Playfair Display', serif"}}>300<span className="text-4xl"> + 10%</span></div>
-                <div className="text-lg text-black/60">€300 + 10% of order value</div>
-              </div>
-              <h3 className="text-2xl font-semibold mb-8">Order Management</h3>
-              <ul className="space-y-4 text-base mb-8 text-black/70">
-                <li>• <strong className="text-black">Everything in Full Research +</strong></li>
-                <li>• I become <strong className="text-black">your representative in Portugal</strong></li>
-                <li>• Place orders on your behalf with suppliers</li>
-                <li>• Communicate directly with manufacturers in Portuguese/English</li>
-                <li>• Track shipments & coordinate logistics</li>
-                <li>• Handle quality control and resolve issues</li>
-                <li>• Keep you updated at every step</li>
-                <li>• <strong className="text-black">Your dedicated person on the ground — I handle everything</strong></li>
-              </ul>
-
-              <div className="mb-8 p-4 bg-gray-50 rounded-xl border border-black/5">
-                <p className="text-sm font-semibold mb-2 text-black">When this works for you:</p>
-                <p className="text-sm text-black/70 leading-relaxed">
-                  You want a hands-off solution where I manage the entire process from order to delivery. You don't want to deal with language barriers, time zones, or chasing suppliers.
-                </p>
-              </div>
-
-              <a href="#contact" className="block w-full py-5 text-center border-2 border-black text-black hover:bg-black hover:text-white transition-all font-semibold text-sm tracking-wider">
-                LET'S TALK
-              </a>
-            </motion.div>
+          <div className="grid lg:grid-cols-3 gap-8 items-stretch">
+            {[
+              {
+                name: "Supplier Shortlist",
+                price: "200",
+                label: "Contacts Only",
+                description: "A focused shortlist for clients who want to work directly with suppliers.",
+                features: ["3–5 verified suppliers matched to your brief", "Available product range, pricing and minimum order information", "Direct contacts for your own follow-up"],
+                note: "You handle supplier communication, samples and orders after the handover.",
+                cta: "REQUEST A SHORTLIST",
+                featured: false
+              },
+              {
+                name: "Full Research",
+                price: "500",
+                label: "Sourcing Project",
+                description: "Detailed sourcing research for your material or manufacturing brief.",
+                features: ["Supplier shortlist and direct outreach, including phone calls", "Specifications, availability and MOQ checks", "Initial pricing negotiations and sample requests", "A report comparing options, with recommendations"],
+                note: "I handle research and supplier communication so you can make an informed decision.",
+                cta: "START SOURCING",
+                featured: true
+              },
+              {
+                name: "Full Cycle 360°",
+                price: "1,000",
+                label: "Product Development & Production",
+                description: "One point of contact from technical development through production and delivery.",
+                features: ["Tech packs and material sourcing", "Supplier selection, sampling and production coordination", "Quality control and issue resolution", "Logistics coordination and project updates"],
+                note: "For projects spanning 3–6 months. Broader scopes: €1,500–3,000, with a tailored quote before work begins.",
+                cta: "DISCUSS YOUR PROJECT",
+                featured: false
+              }
+            ].map((plan) => (
+              <motion.div key={plan.name} whileHover={{ y: -10 }} className={`flex flex-col p-8 xl:p-10 rounded-2xl border-2 ${plan.featured ? 'bg-[#A8B5A0] border-[#A8B5A0]' : 'bg-white border-black/10'}`}>
+                <div className="text-sm tracking-widest uppercase mb-6 text-black/60">{plan.label}</div>
+                <div className="mb-8">
+                  <div className="text-base text-black/60 mb-2">From</div>
+                  <div className="text-5xl xl:text-6xl font-bold whitespace-nowrap" style={{fontFamily: "'Playfair Display', serif"}}>€{plan.price}</div>
+                </div>
+                <h3 className="text-2xl font-semibold mb-4">{plan.name}</h3>
+                <p className="text-base leading-relaxed text-black/80 mb-6">{plan.description}</p>
+                <ul className="list-disc pl-5 space-y-4 text-base text-black/80 mb-8">
+                  {plan.features.map((feature) => <li key={feature}>{feature}</li>)}
+                </ul>
+                <p className="text-base leading-relaxed text-black/70 mb-8">{plan.note}</p>
+                <a href="#contact" className="mt-auto block w-full py-5 px-3 text-center border-2 border-black text-black hover:bg-black hover:text-white transition-all font-semibold text-sm tracking-wider">{plan.cta}</a>
+              </motion.div>
+            ))}
           </div>
-
-          <p className="text-center text-lg mt-16 text-black/60">Custom projects available</p>
+          <div className="grid md:grid-cols-2 gap-8 mt-10">
+            <div className="p-8 rounded-2xl bg-white border border-black/10">
+              <h3 className="text-2xl font-semibold mb-3">Standalone Tech Packs</h3>
+              <p className="text-base text-black/70 leading-relaxed">Factory-ready documentation for your design, available separately or alongside sourcing. <a href="#contact" className="underline underline-offset-4 text-black">Request a quote</a> based on the garment and level of detail.</p>
+            </div>
+            <div className="p-8 rounded-2xl bg-white border border-black/10">
+              <h3 className="text-2xl font-semibold mb-3">Capsule Production · From €1,500</h3>
+              <p className="text-base text-black/70 leading-relaxed">For emerging brands with a design ready to develop: technical preparation, sourcing and production coordination. <a href="#contact" className="underline underline-offset-4 text-black">Discuss your capsule</a> for a tailored scope.</p>
+            </div>
+          </div>
+          <p className="text-center text-base mt-10 text-black/70 max-w-3xl mx-auto leading-relaxed">Final fees depend on the agreed scope. Project payments can be split into 50% upfront, 30% at the midpoint and 20% on completion, or arranged monthly.</p>
         </div>
       </section>
       {/* Featured Materials Section */}
@@ -447,15 +410,15 @@ export default function App() {
             <div>
               <div className="text-sm tracking-[0.3em] uppercase mb-6 text-black/60">About</div>
               <h2 className="text-5xl md:text-6xl font-bold mb-12 leading-tight" style={{fontFamily: "'Playfair Display', serif"}}>
-                4 Years<br/>in Portugal
+                Your Product Partner<br/>in Portugal
               </h2>
 
               <div className="space-y-8 text-lg text-black/70 leading-relaxed">
                 <p>
-                  I've been living in Lisbon since 2022. I regularly attend textile trade shows and have established relationships with manufacturers, fabric agents, and suppliers across Portugal. Through my own sustainable fashion brand SE VISTA, I've navigated the exact challenges you're facing — finding biodegradable fabrics like ramie and lyocell, working with fabric MOQs from 1-12 meters and production runs as low as 1-5 pieces with ethical Portuguese ateliers.
+                  I'm a designer and independent sourcing consultant based in Lisbon since 2022. I support brands across the full product cycle: materials, tech packs, sampling, production, quality control and logistics. I regularly attend textile trade shows and have established relationships with manufacturers, fabric agents, and suppliers across Portugal. Through my own sustainable fashion brand SE VISTA, I've navigated the exact challenges you're facing — finding biodegradable fabrics like ramie and lyocell, working with fabric MOQs from 1-12 meters and production runs as low as 1-5 pieces with ethical Portuguese ateliers.
                 </p>
                 <p>
-                  <strong className="text-black font-semibold">Why this matters:</strong> Portuguese suppliers are notoriously slow with emails and often don't speak English. They prefer phone calls and personal relationships. I have direct phone numbers of managers and agents — access you won't find online.
+                  <strong className="text-black font-semibold">Why this matters:</strong> Local language skills and established relationships help move sourcing and production forward. I have direct phone numbers of managers and agents — access you won't find online.
                 </p>
                 <p>
                   I also have access to EU-wide fabric wholesalers who accept orders from 1-2 meters. This is incredibly hard to find on your own — most require business registration or high minimums.
@@ -471,7 +434,7 @@ export default function App() {
 
             <div className="grid grid-cols-2 gap-6">
               <div className="space-y-6">
-                <img src="/natalia-professional.jpg" className="w-full aspect-[3/4] object-cover rounded-2xl" alt="Natalia Korelina - Sustainable Sourcing Expert" />
+                <img src="/natalia-professional.jpg" className="w-full aspect-[3/4] object-cover rounded-2xl" alt="Natalia Korelina - Sustainable Sourcing and Product Services" />
                 <img src="/linen-fabric.jpg" className="w-full aspect-square object-cover rounded-2xl" alt="Natural Linen Fabric" />
               </div>
               <div className="space-y-6 pt-12">
@@ -503,7 +466,7 @@ export default function App() {
                   <h3 className="text-2xl font-bold" style={{fontFamily: "'Playfair Display', serif"}}>Free Discovery Call</h3>
                 </div>
                 <p className="text-white/90 mb-6 leading-relaxed">
-                  15-minute introductory call to understand your sourcing needs and how I can help.
+                  15-minute introductory call to discuss your materials, tech packs or production plans and identify the right scope of support.
                 </p>
                 <button
                   onClick={() => setIsCalendlyOpen(true)}
