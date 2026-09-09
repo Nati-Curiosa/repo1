@@ -487,7 +487,7 @@ export default function App() {
                   <span className="font-medium">LinkedIn</span>
                 </a>
 
-                <a href="https://www.upwork.com/freelancers/~01dd447159df117cac" target="_blank" rel="noopener noreferrer" className="flex items-center gap-6 hover:text-gray-600 transition-colors group">
+                <a href="https://www.upwork.com/freelancers/~01dd447159df117cac?mp_source=share" target="_blank" rel="noopener noreferrer" className="flex items-center gap-6 hover:text-gray-600 transition-colors group">
                   <div className="w-14 h-14 shrink-0 border-2 border-black/10 flex items-center justify-center group-hover:border-black/30 transition-all">
                     <Globe className="w-5 h-5" aria-hidden="true" />
                   </div>
