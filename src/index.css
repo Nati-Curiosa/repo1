@@ -5,3 +5,11 @@
   --font-serif: "Cormorant Garamond", serif;
   --font-sans: "Inter", sans-serif;
 }
+
+section[id] { scroll-margin-top: 6rem; }
+.case-study summary { list-style: none; }
+.case-study summary::-webkit-details-marker { display: none; }
+.case-study[open] .case-arrow { transform: rotate(180deg); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0s !important; }
+}

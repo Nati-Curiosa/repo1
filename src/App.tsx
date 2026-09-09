@@ -58,19 +58,19 @@ export default function App() {
     <div className="min-h-screen bg-white text-black font-sans selection:bg-gray-900 selection:text-white" style={{fontFamily: "'Inter', sans-serif"}}>
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-black/5">
-        <div className="max-w-[1400px] mx-auto px-8 h-24 flex items-center justify-between">
-          <div className="flex flex-col">
-            <span className="text-xl font-bold tracking-tight" style={{fontFamily: "'Playfair Display', serif"}}>NATALIA KORELINA</span>
+        <div className="max-w-[1120px] mx-auto px-5 sm:px-8 h-20 gap-4 flex items-center justify-between">
+          <div className="flex flex-col min-w-0">
+            <span className="text-lg font-bold tracking-tight" style={{fontFamily: "'Playfair Display', serif"}}>NATALIA KORELINA</span>
             <span className="text-xs tracking-wider text-black/50 uppercase">Sourcing & Product Services • Portugal & EU</span>
           </div>
 
-          <div className="hidden md:flex items-center gap-12 text-sm font-medium tracking-wide">
+          <div className="hidden md:flex items-center gap-6 md:p-8 text-sm font-medium tracking-wide">
             <a href="#services" className="hover:text-gray-600 transition-colors">Services</a>
             <a href="#about" className="hover:text-gray-600 transition-colors">About</a>
             <a href="#contact" className="px-6 py-3 bg-black text-white hover:bg-gray-800 transition-all">Contact</a>
           </div>
 
-          <button aria-label={isMenuOpen ? "Close navigation" : "Open navigation"} aria-expanded={isMenuOpen} className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button aria-label={isMenuOpen ? "Close navigation" : "Open navigation"} aria-expanded={isMenuOpen} className="md:hidden shrink-0 p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X /> : <Menu />}
           </button>
         </div>
@@ -88,7 +88,7 @@ export default function App() {
           <a href="#contact" onClick={() => setIsMenuOpen(false)} className="text-4xl font-bold hover:text-gray-400 transition-colors" style={{fontFamily: "'Playfair Display', serif"}}>Contact</a>
           <button
             onClick={() => { setIsCalendlyOpen(true); setIsMenuOpen(false); }}
-            className="mt-8 px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-black transition-all text-lg font-semibold"
+            className="mt-8 px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-black transition-all text-base font-semibold"
           >
             Book Call
           </button>
@@ -96,7 +96,7 @@ export default function App() {
       )}
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
+      <section className="relative min-h-[560px] md:min-h-[620px] flex items-center justify-center overflow-hidden pt-28 pb-16">
         <motion.div
           initial={false}
           animate={{ scale: 1 }}
@@ -113,7 +113,7 @@ export default function App() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
         </motion.div>
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-8 text-center text-white">
+        <div className="relative z-10 max-w-[1120px] mx-auto px-8 text-center text-white">
           <motion.div
             initial={false}
             animate={{ opacity: 1, y: 0 }}
@@ -122,19 +122,19 @@ export default function App() {
             <div className="mb-6 text-sm tracking-[0.3em] uppercase font-medium">
               Lisbon • Portugal • EU
             </div>
-            <h1 className="text-4xl sm:text-6xl lg:text-8xl font-bold mb-8 leading-[1.05]" style={{fontFamily: "'Playfair Display', serif"}}>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-[1.05]" style={{fontFamily: "'Playfair Display', serif"}}>
               Sustainable Sourcing<br/>&amp; Product Services
             </h1>
-            <p className="text-xl md:text-2xl max-w-2xl mx-auto mb-12 font-light leading-relaxed">
+            <p className="text-base md:text-lg max-w-2xl mx-auto mb-12 font-light leading-relaxed">
               Fabric sourcing in Portugal and the EU, tech packs, small-batch production, quality control and logistics. Based in Lisbon, working with international fashion, home and hospitality brands.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
-              <a href="#contact" className="px-10 py-5 bg-white text-black font-semibold hover:bg-gray-100 transition-all text-lg">
+              <a href="#contact" className="px-6 py-3 bg-white text-black font-semibold hover:bg-gray-100 transition-all text-lg">
                 Start Project
               </a>
               <button
                 onClick={() => setIsCalendlyOpen(true)}
-                className="px-10 py-5 border-2 border-white text-white font-semibold hover:bg-white hover:text-black transition-all text-lg"
+                className="px-6 py-3 border-2 border-white text-white font-semibold hover:bg-white hover:text-black transition-all text-lg"
               >
                 Book 15-min Call
               </button>
@@ -145,18 +145,18 @@ export default function App() {
 
       <main>
       {/* Materials Keywords Section */}
-      <section className="py-20 bg-[#F5EFE7] px-8 relative overflow-hidden">
+      <section className="py-20 bg-[#F5EFE7] px-5 sm:px-8 relative overflow-hidden">
         {/* Decorative circles */}
         <div className="absolute top-10 right-20 w-64 h-64 bg-[#D4A574] rounded-full opacity-20 blur-3xl"></div>
         <div className="absolute bottom-10 left-10 w-80 h-80 bg-[#A8B5A0] rounded-full opacity-20 blur-3xl"></div>
 
-        <div className="max-w-[1400px] mx-auto relative z-10">
+        <div className="max-w-[1120px] mx-auto relative z-10">
           <p className="text-xs tracking-[0.3em] uppercase mb-8 text-center text-black/40 font-medium">Materials Expertise</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center" style={{fontFamily: "'Playfair Display', serif"}}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center" style={{fontFamily: "'Playfair Display', serif"}}>
             I know where to find:
           </h2>
           <div className="max-w-4xl mx-auto">
-            <p className="text-xl md:text-2xl text-center leading-relaxed text-black/70">
+            <p className="text-base md:text-lg text-center leading-relaxed text-black/70">
               {materials.join(", ")}
             </p>
           </div>
@@ -164,15 +164,15 @@ export default function App() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-32 bg-white px-8 relative overflow-hidden">
+      <section id="services" className="py-16 md:py-20 bg-white px-5 sm:px-8 relative overflow-hidden">
         {/* Decorative shapes */}
         <div className="absolute top-20 left-10 w-96 h-96 bg-[#D4A5A5] rounded-full opacity-20 blur-3xl"></div>
         <div className="absolute bottom-20 right-20 w-72 h-72 bg-[#A8B5A0] rounded-full opacity-20 blur-3xl"></div>
 
-        <div className="max-w-[1400px] mx-auto relative z-10">
-          <div className="text-center mb-24">
+        <div className="max-w-[1120px] mx-auto relative z-10">
+          <div className="text-center mb-10 md:mb-12">
             <div className="text-sm tracking-[0.3em] uppercase mb-4 text-black/60">What I Do</div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Sourcing &amp; Product Development Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Sourcing &amp; Product Development Services</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -182,14 +182,14 @@ export default function App() {
                 <motion.div
                   key={idx}
                   whileHover={{ y: -10 }}
-                  className="relative p-12 rounded-3xl overflow-hidden"
+                  className="relative p-6 md:p-8 rounded-3xl overflow-hidden"
                   style={{backgroundColor: colors[idx]}}
                 >
                   <div className="relative z-10">
                     <div className="mb-6 opacity-70">{service.icon}</div>
                     <div className="text-xs tracking-[0.3em] uppercase mb-4 text-black/50">{service.tag}</div>
-                    <h3 className="text-3xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>{service.title}</h3>
-                    <p className="text-lg text-black/80 leading-relaxed">
+                    <h3 className="text-2xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>{service.title}</h3>
+                    <p className="text-base text-black/80 leading-relaxed">
                       {service.description}
                     </p>
                   </div>
@@ -201,91 +201,84 @@ export default function App() {
       </section>
 
       {/* Case Studies Section */}
-      <section className="py-32 bg-[#F5EFE7] px-8 relative overflow-hidden">
-        {/* Decorative circles */}
-        <div className="absolute top-32 right-32 w-80 h-80 bg-[#D4A5A5] rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-10 left-20 w-96 h-96 bg-[#D4A574] rounded-full opacity-20 blur-3xl"></div>
-
-        <div className="max-w-[1400px] mx-auto relative z-10">
-          <div className="text-center mb-24">
-            <div className="text-sm tracking-[0.3em] uppercase mb-4 text-black/60">Recent Work</div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Sourcing Projects in Portugal &amp; the EU</h2>
+      <section id="projects" className="py-16 md:py-20 bg-[#F5EFE7] px-5 sm:px-8">
+        <div className="max-w-[1120px] mx-auto">
+          <div className="mb-10">
+            <div className="text-sm tracking-widest uppercase mb-3 text-black/60">Selected Work</div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{fontFamily: "'Playfair Display', serif"}}>Sourcing Projects in Portugal &amp; the EU</h2>
+            <p className="text-base text-black/60">Explore a project to see the brief, the work and the result.</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-12">
-            <motion.div whileHover={{ y: -10 }} className="bg-white overflow-hidden rounded-3xl">
-              <div className="p-10">
-                <div className="text-xs tracking-[0.3em] uppercase mb-4 text-black/40">Fashion Brand</div>
-                <h3 className="text-3xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>SE VISTA</h3>
-                <p className="text-base text-black/70 leading-relaxed mb-4">
-                  <strong className="text-black">Result:</strong> Built a working supply chain for 25+ garment styles across 5–6 collections, with three Portuguese ateliers and access to low-MOQ materials.
-                </p>
-                <p className="text-base text-black/70 leading-relaxed mb-4">
-                  <strong className="text-black">Challenge:</strong> Launch sustainable fashion brand with natural fabrics and ethical production in Portugal
-                </p>
-                <p className="text-base text-black/70 leading-relaxed mb-6">
-                  <strong className="text-black">What I did:</strong> Sourced 10+ suppliers across EU and Portugal for ramie, lyocell, organic cotton, hemp, deadstock fabrics. Found specialized suppliers for plastic-free threads, corozo/shell/metal buttons, organic labels. Coordinated production with 3 main manufacturers accepting 1-5 piece MOQs. Developed 25+ garment styles across 5–6 collections.
-                </p>
-                <div className="flex flex-wrap gap-3 text-sm font-medium">
-                  <span className="text-black/50">10+ suppliers</span>
-                  <span className="text-black/50">•</span>
-                  <span className="text-black/50">Low MOQ</span>
-                  <span className="text-black/50">•</span>
-                  <span className="text-black/50">5-6 collections</span>
+          <div className="space-y-3">
+            {[
+  {
+    "title": "Premium Basics Manufacturing",
+    "category": "Fashion · Portugal",
+    "summary": "Manufacturers identified for 100–300 pieces per colour, with fabric sourcing handled by the factory.",
+    "challenge": "Find Portuguese manufacturers for elevated basic layers in premium fabrics, with a manageable minimum order per colour.",
+    "work": "Identified manufacturers offering 100–300 pieces per colour and in-house fabric sourcing, bringing fabric selection and garment production together.",
+    "result": "The client received manufacturing options in Portugal that matched the premium positioning and required order volumes."
+  },
+  {
+    "title": "Embroidered Company Merchandise",
+    "category": "Corporate Merchandise · Portugal",
+    "summary": "100% cotton shirts with embroidery at €9 each, from 10 pieces, with quality checks and international shipping.",
+    "challenge": "Deliver branded merchandise on a tight timeline when the factories did not ship internationally.",
+    "work": "Coordinated production in Portugal and personally checked quality before dispatch. Returned defective items to the factory, secured a full refund for those items and arranged shipping to the international client.",
+    "result": "The client had production, quality control, defect resolution and international shipping coordinated through one contact. The €9 unit price and 10-piece minimum relate to this project; future quotes depend on the specification."
+  },
+  {
+    "title": "SE VISTA",
+    "category": "Selected Project",
+    "summary": "Built a working supply chain for 25+ garment styles across 5–6 collections, with three Portuguese ateliers and access to low-MOQ materials.",
+    "challenge": "Launch sustainable fashion brand with natural fabrics and ethical production in Portugal",
+    "work": "Sourced 10+ suppliers across EU and Portugal for ramie, lyocell, organic cotton, hemp, deadstock fabrics. Found specialized suppliers for plastic-free threads, corozo/shell/metal buttons, organic labels. Coordinated production with 3 main manufacturers accepting 1-5 piece MOQs. Developed 25+ garment styles across 5–6 collections.",
+    "result": "Built a working supply chain for 25+ garment styles across 5–6 collections, with three Portuguese ateliers and access to low-MOQ materials."
+  },
+  {
+    "title": "Restaurant Outdoor Seating",
+    "category": "Selected Project",
+    "summary": "40 custom waterproof cushions delivered in 2 weeks with full specifications",
+    "challenge": "Find custom cushions for outdoor use — waterproof, quick-drying, removable covers, minimal cost",
+    "work": "Researched Lisbon manufacturers. Coordinated communication between client and supplier. Organized calls, emails, fabric selection. Arranged samples and custom quotes. Created unified aesthetic solution within budget.",
+    "result": "40 custom waterproof cushions delivered in 2 weeks with full specifications"
+  },
+  {
+    "title": "Event Decorations",
+    "category": "Selected Project",
+    "summary": "Enabled independent repeat purchasing from EU fabric wholesalers at €2–5/m, with minimum orders from 1–2 metres.",
+    "challenge": "Connect creative professional with affordable fabric suppliers for event decoration",
+    "work": "Showed fabric samples and possibilities. Provided consultation on materials for weddings/events. Connected client with wholesale suppliers. Passed verified contacts.",
+    "result": "Enabled independent repeat purchasing from EU fabric wholesalers at €2–5/m, with minimum orders from 1–2 metres."
+  }
+].map((project) => (
+              <details key={project.title} className="case-study group bg-white rounded-xl border border-black/10">
+                <summary className="flex cursor-pointer items-start justify-between gap-4 p-5 sm:p-6 rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4">
+                  <div className="min-w-0">
+                    <span className="block text-xs tracking-widest uppercase text-black/50 mb-2">{project.category}</span>
+                    <h3 className="text-xl sm:text-2xl font-semibold mb-2" style={{fontFamily: "'Playfair Display', serif"}}>{project.title}</h3>
+                    <p className="text-base text-black/70 leading-relaxed max-w-3xl">{project.summary}</p>
+                  </div>
+                  <span aria-hidden="true" className="case-arrow text-2xl shrink-0 transition-transform">⌄</span>
+                </summary>
+                <div className="px-5 sm:px-6 pb-6 border-t border-black/5 pt-5 grid md:grid-cols-3 gap-6 text-base leading-relaxed text-black/70">
+                  <div><h4 className="font-semibold text-black mb-2">Brief</h4><p>{project.challenge}</p></div>
+                  <div><h4 className="font-semibold text-black mb-2">What I did</h4><p>{project.work}</p></div>
+                  <div><h4 className="font-semibold text-black mb-2">Result</h4><p>{project.result}</p></div>
                 </div>
-              </div>
-            </motion.div>
-            <motion.div whileHover={{ y: -10 }} className="bg-white overflow-hidden rounded-3xl">
-              <div className="p-10">
-                <div className="text-xs tracking-[0.3em] uppercase mb-4 text-black/40">Hospitality</div>
-                <h3 className="text-3xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Restaurant Outdoor Seating</h3>
-                <p className="text-base text-black/70 leading-relaxed mb-4">
-                  <strong className="text-black">Result:</strong> 40 custom waterproof cushions delivered in 2 weeks with full specifications
-                </p>
-                <p className="text-base text-black/70 leading-relaxed mb-4">
-                  <strong className="text-black">Challenge:</strong> Find custom cushions for outdoor use — waterproof, quick-drying, removable covers, minimal cost
-                </p>
-                <p className="text-base text-black/70 leading-relaxed mb-6">
-                  <strong className="text-black">What I did:</strong> Researched Lisbon manufacturers. Coordinated communication between client and supplier. Organized calls, emails, fabric selection. Arranged samples and custom quotes. Created unified aesthetic solution within budget.
-                </p>
-                <div className="flex flex-wrap gap-3 text-sm font-medium">
-                  <span className="text-black/50">40 custom pieces</span>
-                  <span className="text-black/50">•</span>
-                  <span className="text-black/50">2 weeks</span>
-                </div>
-              </div>
-            </motion.div>
-            <motion.div whileHover={{ y: -10 }} className="bg-white overflow-hidden rounded-3xl">
-              <div className="p-10">
-                <div className="text-xs tracking-[0.3em] uppercase mb-4 text-black/40">Events & Weddings</div>
-                <h3 className="text-3xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Event Decorations</h3>
-                <p className="text-base text-black/70 leading-relaxed mb-4">
-                  <strong className="text-black">Result:</strong> Enabled independent repeat purchasing from EU fabric wholesalers at €2–5/m, with minimum orders from 1–2 metres.
-                </p>
-                <p className="text-base text-black/70 leading-relaxed mb-4">
-                  <strong className="text-black">Challenge:</strong> Connect creative professional with affordable fabric suppliers for event decoration
-                </p>
-                <p className="text-base text-black/70 leading-relaxed mb-6">
-                  <strong className="text-black">What I did:</strong> Showed fabric samples and possibilities. Provided consultation on materials for weddings/events. Connected client with wholesale suppliers. Passed verified contacts.
-                </p>
-                <div className="flex flex-wrap gap-3 text-sm font-medium">
-                  <span className="text-black/50">€2-5/m</span>
-                  <span className="text-black/50">•</span>
-                  <span className="text-black/50">1-2m MOQ</span>
-                </div>
-              </div>
-            </motion.div>
+              </details>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-32 bg-[#F5EFE7] px-6 sm:px-8 border-t border-black/5 relative overflow-hidden">
+      <section id="pricing" className="py-16 md:py-20 bg-[#F5EFE7] px-6 sm:px-8 border-t border-black/5 relative overflow-hidden">
         <div className="absolute top-10 left-32 w-80 h-80 bg-[#A8B5A0] rounded-full opacity-15 blur-3xl"></div>
         <div className="absolute bottom-32 right-10 w-96 h-96 bg-[#D4A5A5] rounded-full opacity-15 blur-3xl"></div>
-        <div className="max-w-[1400px] mx-auto relative z-10">
+        <div className="max-w-[1120px] mx-auto relative z-10">
           <div className="text-center mb-16">
             <div className="text-sm tracking-[0.3em] uppercase mb-4 text-black/60">Investment</div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Pricing</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Pricing</h2>
             <p className="text-xl text-black/70">Standalone services from €200. Sourcing projects from €500.</p>
           </div>
           <div className="grid lg:grid-cols-3 gap-8 items-stretch">
@@ -325,7 +318,7 @@ export default function App() {
                 <div className="text-sm tracking-widest uppercase mb-6 text-black/60">{plan.label}</div>
                 <div className="mb-8">
                   <div className="text-base text-black/60 mb-2">From</div>
-                  <div className="text-5xl xl:text-6xl font-bold whitespace-nowrap" style={{fontFamily: "'Playfair Display', serif"}}>€{plan.price}</div>
+                  <div className="text-4xl xl:text-5xl font-bold whitespace-nowrap" style={{fontFamily: "'Playfair Display', serif"}}>€{plan.price}</div>
                 </div>
                 <h3 className="text-2xl font-semibold mb-4">{plan.name}</h3>
                 <p className="text-base leading-relaxed text-black/80 mb-6">{plan.description}</p>
@@ -351,17 +344,17 @@ export default function App() {
         </div>
       </section>
       {/* Featured Materials Section */}
-      <section className="py-32 bg-white px-8 relative overflow-hidden">
+      <section className="py-16 md:py-20 bg-white px-5 sm:px-8 relative overflow-hidden">
         {/* Decorative shapes */}
         <div className="absolute top-20 right-10 w-80 h-80 bg-[#D4A574] rounded-full opacity-15 blur-3xl"></div>
         <div className="absolute bottom-20 left-32 w-72 h-72 bg-[#F5EFE7] rounded-full opacity-40 blur-3xl"></div>
 
-        <div className="max-w-[1400px] mx-auto relative z-10">
-          <div className="text-center mb-24">
+        <div className="max-w-[1120px] mx-auto relative z-10">
+          <div className="text-center mb-10 md:mb-12">
             <div className="text-sm tracking-[0.3em] uppercase mb-4 text-black/60">Recent Work</div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Fabrics We've Sourced</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{fontFamily: "'Playfair Display', serif"}}>Fabrics We've Sourced</h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-3 gap-6 md:p-8">
             {[
               {
                 name: "Ramie",
@@ -393,7 +386,7 @@ export default function App() {
                     referrerPolicy="no-referrer"
                   />
                 </div>
-                <h3 className="text-3xl font-bold mb-2" style={{fontFamily: "'Playfair Display', serif"}}>{material.name}</h3>
+                <h3 className="text-2xl font-bold mb-2" style={{fontFamily: "'Playfair Display', serif"}}>{material.name}</h3>
                 <p className="text-lg text-black/60">{material.desc}</p>
               </motion.div>
             ))}
@@ -403,20 +396,20 @@ export default function App() {
 
       {/* Experience Section */}
       {/* About Section - Magazine Editorial Style */}
-      <section id="about" className="py-32 bg-[#F5EFE7] px-8 relative overflow-hidden">
+      <section id="about" className="py-16 md:py-20 bg-[#F5EFE7] px-5 sm:px-8 relative overflow-hidden">
         {/* Decorative shapes */}
         <div className="absolute top-10 left-10 w-96 h-96 bg-[#A8B5A0] rounded-full opacity-20 blur-3xl"></div>
         <div className="absolute bottom-20 right-20 w-80 h-80 bg-[#D4A5A5] rounded-full opacity-20 blur-3xl"></div>
 
-        <div className="max-w-[1400px] mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="max-w-[1120px] mx-auto relative z-10">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-6 md:p-8 items-center">
             <div>
               <div className="text-sm tracking-[0.3em] uppercase mb-6 text-black/60">About</div>
-              <h2 className="text-5xl md:text-6xl font-bold mb-12 leading-tight" style={{fontFamily: "'Playfair Display', serif"}}>
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 leading-tight" style={{fontFamily: "'Playfair Display', serif"}}>
                 Your Product Partner<br/>in Portugal
               </h2>
 
-              <div className="space-y-8 text-lg text-black/70 leading-relaxed">
+              <div className="space-y-6 text-base text-black/70 leading-relaxed">
                 <p>
                   I'm a designer and independent sourcing consultant based in Lisbon since 2022. I support brands across the full product cycle: materials, tech packs, sampling, production, quality control and logistics. I regularly attend textile trade shows and have established relationships with manufacturers, fabric agents, and suppliers across Portugal. Through my own sustainable fashion brand SE VISTA, I've navigated the exact challenges you're facing — finding biodegradable fabrics like ramie and lyocell, working with fabric MOQs from 1-12 meters and production runs as low as 1-5 pieces with ethical Portuguese ateliers.
                 </p>
@@ -449,16 +442,16 @@ export default function App() {
         </div>
       </section>
       {/* Contact Section */}
-      <section id="contact" className="py-32 bg-[#F5EFE7] px-8 relative overflow-hidden">
+      <section id="contact" className="py-16 md:py-20 bg-[#F5EFE7] px-5 sm:px-8 relative overflow-hidden">
         {/* Decorative shapes */}
         <div className="absolute top-32 right-10 w-80 h-80 bg-[#D4A574] rounded-full opacity-15 blur-3xl"></div>
         <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#A8B5A0] rounded-full opacity-15 blur-3xl"></div>
 
-        <div className="max-w-[1400px] mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="max-w-[1120px] mx-auto relative z-10">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-6 md:p-8 items-center">
             <div>
               <div className="text-sm tracking-[0.3em] uppercase mb-6 text-black/60">Get in Touch</div>
-              <h2 className="text-5xl md:text-6xl font-bold mb-12 leading-tight" style={{fontFamily: "'Playfair Display', serif"}}>
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 leading-tight" style={{fontFamily: "'Playfair Display', serif"}}>
                 Let's Build<br/>Your Supply<br/>Chain
               </h2>
 
@@ -481,14 +474,14 @@ export default function App() {
 
               <div className="space-y-6">
                 <a href="mailto:n.korelina21@gmail.com" className="flex items-center gap-6 text-xl hover:text-gray-600 transition-colors group">
-                  <div className="w-14 h-14 border-2 border-black/10 flex items-center justify-center group-hover:border-black/30 transition-all">
+                  <div className="w-12 h-12 shrink-0 border-2 border-black/10 flex items-center justify-center group-hover:border-black/30 transition-all">
                     <Mail className="w-5 h-5" />
                   </div>
-                  <span className="font-medium">n.korelina21@gmail.com</span>
+                  <span className="font-medium break-all text-base sm:text-lg">n.korelina21@gmail.com</span>
                 </a>
 
                 <a href="https://www.linkedin.com/in/natalia-korelina-13975a24a/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-6 text-xl hover:text-gray-600 transition-colors group">
-                  <div className="w-14 h-14 border-2 border-black/10 flex items-center justify-center group-hover:border-black/30 transition-all">
+                  <div className="w-12 h-12 shrink-0 border-2 border-black/10 flex items-center justify-center group-hover:border-black/30 transition-all">
                     <Linkedin className="w-5 h-5" />
                   </div>
                   <span className="font-medium">LinkedIn</span>
@@ -513,7 +506,7 @@ export default function App() {
             </div>
 
             <div className="bg-white text-black p-8 rounded-2xl">
-              <h3 className="text-3xl font-bold mb-8" style={{fontFamily: "'Playfair Display', serif"}}>Send a Message</h3>
+              <h3 className="text-2xl font-bold mb-8" style={{fontFamily: "'Playfair Display', serif"}}>Send a Message</h3>
 
               <iframe
                 title="Sourcing and product development enquiry form"
@@ -535,7 +528,7 @@ export default function App() {
       </main>
       {/* Footer */}
       <footer className="py-16 px-8 bg-white border-t border-black/5">
-        <div className="max-w-[1400px] mx-auto text-center">
+        <div className="max-w-[1120px] mx-auto text-center">
           <p className="text-sm tracking-wider text-black/40">
             © {new Date().getFullYear()} Natalia Korelina
           </p>
