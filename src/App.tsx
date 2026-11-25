@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "motion/react";
 import { Leaf, MapPin, Globe, Mail, Linkedin, Menu, X, Calendar, CheckCircle2, Cpu } from "lucide-react";
 import { PopupModal } from "react-calendly";
+import MaterialsGallery from "./MaterialsGallery";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -66,6 +67,7 @@ export default function App() {
 
           <div className="hidden md:flex items-center gap-6 md:gap-8 text-sm font-medium tracking-wide">
             <a href="#services" className="hover:text-gray-600 transition-colors">Services</a>
+            <a href="#materials" className="hover:text-gray-600 transition-colors">Materials</a>
             <a href="#about" className="hover:text-gray-600 transition-colors">About</a>
             <a href="#contact" className="px-6 py-3 bg-black text-white hover:bg-gray-800 transition-all">Contact</a>
           </div>
@@ -84,6 +86,7 @@ export default function App() {
           className="fixed inset-0 z-40 bg-black text-white pt-32 px-8 flex flex-col gap-8"
         >
           <a href="#services" onClick={() => setIsMenuOpen(false)} className="text-4xl font-bold hover:text-gray-400 transition-colors" style={{fontFamily: "'Playfair Display', serif"}}>Services</a>
+          <a href="#materials" onClick={() => setIsMenuOpen(false)} className="text-4xl font-bold hover:text-gray-400 transition-colors" style={{fontFamily: "'Playfair Display', serif"}}>Materials</a>
           <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-4xl font-bold hover:text-gray-400 transition-colors" style={{fontFamily: "'Playfair Display', serif"}}>About</a>
           <a href="#contact" onClick={() => setIsMenuOpen(false)} className="text-4xl font-bold hover:text-gray-400 transition-colors" style={{fontFamily: "'Playfair Display', serif"}}>Contact</a>
           <button
@@ -393,6 +396,8 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      <MaterialsGallery />
 
       {/* Experience Section */}
       {/* About Section - Magazine Editorial Style */}

@@ -1,0 +1,98 @@
+[
+  {
+    "slug": "leaf-pattern",
+    "category": "Fabrics",
+    "title": "Sheer leaf motifs",
+    "description": "Lightweight fabric with translucent botanical details.",
+    "width": 665,
+    "height": 1182
+  },
+  {
+    "slug": "button-library",
+    "category": "Trims",
+    "title": "A library of buttons",
+    "description": "A closer look at colour, shape and surface finishes.",
+    "width": 360,
+    "height": 480
+  },
+  {
+    "slug": "embroidered-card",
+    "category": "Decoration",
+    "title": "Detailed embroidery",
+    "description": "A playing-card motif with dense stitching and raised details.",
+    "width": 665,
+    "height": 1182
+  },
+  {
+    "slug": "textured-blue",
+    "category": "Fabrics",
+    "title": "Texture in navy",
+    "description": "Diagonal raised lines bring depth to a tonal fabric.",
+    "width": 768,
+    "height": 1024
+  },
+  {
+    "slug": "cork-buttons",
+    "category": "Trims",
+    "title": "Cork button samples",
+    "description": "Natural surface patterns across different shapes and sizes.",
+    "width": 323,
+    "height": 576
+  },
+  {
+    "slug": "sparkle-stripes",
+    "category": "Decoration",
+    "title": "Shimmering stripes",
+    "description": "A dark fabric with undulating, reflective lines.",
+    "width": 768,
+    "height": 1024
+  },
+  {
+    "slug": "padded-textures",
+    "category": "Fabrics",
+    "title": "Padded textures",
+    "description": "Soft dimensional samples in green, blue and navy.",
+    "width": 768,
+    "height": 1024
+  },
+  {
+    "slug": "peach-drape",
+    "category": "Decoration",
+    "title": "Drape meets openwork",
+    "description": "A display combining fluid fabric and an open-knit texture.",
+    "width": 768,
+    "height": 1024
+  },
+  {
+    "slug": "coffee-buttons",
+    "category": "Trims",
+    "title": "Coffee-ground buttons",
+    "description": "An exhibition display presenting buttons made with coffee grounds.",
+    "width": 768,
+    "height": 1024
+  },
+  {
+    "slug": "cotton-orange",
+    "category": "Fabrics",
+    "title": "Cotton & orange blend",
+    "description": "A mint sample labelled 85% organic cotton and 15% orange, 140 g/m\u00b2.",
+    "width": 768,
+    "height": 1024
+  },
+  {
+    "slug": "lyocell-sample",
+    "category": "Fabrics",
+    "title": "MicroTencel lyocell",
+    "description": "A pale blue sample labelled 100% MicroTencel lyocell.",
+    "width": 768,
+    "height": 1024
+  },
+  {
+    "slug": "linen-jersey",
+    "category": "Fabrics",
+    "title": "Linen jersey",
+    "description": "A softly textured sample labelled 100% linen, 145 g/m\u00b2.",
+    "width": 768,
+    "height": 1024
+  }
+]
